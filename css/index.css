@@ -1,0 +1,374 @@
+/* -- mobile( ? ~ 767px ) -- */
+@media screen and (max-width: 767px) {
+ 
+/*------------------------------------비쥬얼영역---------------------------------------*/
+
+section > article.atc_visual { position: relative; width: 100%; height: calc(100vh - 50px); margin-top: 50px; background: url("../images/img_visual_01.jpg") no-repeat; background-size: cover; background-position: center center; text-align: center;}
+section > article.atc_visual > div.visual_title { padding-top: calc(100vh / 3); }
+section > article.atc_visual > div.visual_title > p.sup_title { margin-bottom: 5px; font-size: 0.875em; color: #ccc; }
+section > article.atc_visual > div.visual_title > p.main_title { position: relative; display: block; font-family: 'NotoSansKR-Medium'; font-size: 1em; color: #fff;}
+section > article.atc_visual > div.scroll { position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); }
+section > article.atc_visual > div.scroll > div { position: relative; width: 17px; height: 40px; margin: 0 auto; }
+section > article.atc_visual > div.scroll > div > span.animation { display: block; position: absolute; top: 0; left: 0; width: 17px; height: 6px;  background: url("../images/ico_scroll.png") no-repeat center center; background-size: cover;
+    animation-name: scroll; animation-duration: 1.5s;  animation-iteration-count: infinite; }
+section > article.atc_visual > div.scroll > p { font-size: 0.875em; color: #fff; }
+
+@keyframes scroll {
+    from { 
+        top: 0; opacity: 1; transform: scale(1);
+        animation-timing-function: ease;
+    }
+    to {
+        top: 20px; opacity: 0; transform: scale(0.9);
+    }
+}
+    
+/*---------------------------------------About Me영역-------------------------------------------*/
+
+section > article.atc_aboutme {  width: 100%; height: auto; padding: calc(6.6vh) 0; background: #eee; text-align: center; }
+section > article.atc_aboutme > div.inner_wrap > ul > li { position: relative; width: calc(100% - 40px); height: 0; margin: 0 20px; margin-top: calc(5vh); padding-top: 250px; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div { overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background: #fff; box-shadow: 0 0 40px #dbdbdb;}
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > img { margin-top: 3%; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > p.ico_title { margin-bottom: 3%; font-family: 'NotoSansKR-Bold'; font-size: 1.125em; color: #7ac3d1;  }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > p.ico_desc { font-size: 0.875em; }
+     
+section > article.atc_aboutme > div.inner_wrap > a { display: block; width: calc(100% - 40px); height: 50px; margin: 0 auto; margin-top: calc(7vh); color: #fff; font-family: 'NotoSansKR-Bold'; padding: 0 20px; line-height: 50px; background: #7ac3d1; }
+section > article.atc_aboutme > div.inner_wrap > a > span { font-family: 'NotoSansKR-Regular'; font-size: 0.875em;  margin-left: 20px; }
+    
+    
+/*-----------------------------------------포트폴리오 영역----------------------------------------*/
+
+section > article.atc_portpolio { padding: calc(6.6vh) 20px;  text-align: center; }
+section > article.atc_portpolio > ul.tab { display: inline-block; margin: 0 auto; margin-top: calc(1.5vh); margin-bottom: calc(5vh);}
+section > article.atc_portpolio > ul.tab > li { float: left; width: auto; }
+section > article.atc_portpolio > ul.tab > li > a { display: block; width: 100%; padding: 10px calc(4vw); font-family: 'NotoSansKR-Medium'; font-size: 1em; color: #999; }
+section > article.atc_portpolio > ul.tab > li.active > a { border-bottom: 2px solid #000; font-family: 'NotoSansKR-Bold'; color: #000; }
+section > article.atc_portpolio > ul.contents > li { display: block; float: left; width: 100%; height: auto; margin-top: 3.4482%; border-bottom: 2px solid #ccc; }
+section > article.atc_portpolio > ul.contents > li > a { position: relative; display: block; width: 100%; height: 100%; background: #f5f5f5; object-fit: cover;}
+section > article.atc_portpolio > ul.contents > li > a > img { display: block; width: 100%; height: 100%;  }
+section > article.atc_portpolio > ul.contents > li > a > div { position: absolute; bottom: 7%; left:0; width: 100%;}
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_title {font-family: 'NotoSansKR-Medium'; font-size: 1em; color: #333; }
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_desc { font-size: 0.875em; color: #999; }
+
+section > article.atc_portpolio > ul.contents > li.active { animation-name: active; animation-duration: 0.3s;  animation-iteration-count: 1;}
+
+@keyframes active {
+    from { 
+        opacity: 0; transform: scale(0);
+        animation-timing-function: ease;
+    }
+    to {
+        opacity: 1; transform: scale(1);
+    }
+}
+   
+/*--------------------------------------------아트웍영역-------------------------------------------*/
+
+
+section > article.atc_artwork { width: 100%; padding: calc(6.6vh) 0; background: #f5f5f5; text-align: center; }
+section > article.atc_artwork > div.inner_wrap > div.slide { position: relative; margin-top: calc(5vh);}
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_prev { position: absolute; top: 50%; left: 2%; height: 56px; width: 28px; background: url("../images/ico_left_B.png") no-repeat; background-size: cover; text-indent: -9999em; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_next { position: absolute; top: 50%; right: 2%; height: 56px; width: 28px; background: url("../images/ico_right_B.png") no-repeat; background-size: cover; text-indent: -9999em; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations { display: inline-block; margin: 0 auto; margin-top: 30px; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li { float: left; width: 30px; height: 4px; margin-right: 10px; background: #999; transition: color 0.5s;}
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li:last-child { margin-right: 0; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li.sel { background: black; }
+
+
+/*---------------------------------------아트웍영역_슬라이드-----------------------------------------*/
+    
+div.slide > div.form { position: relative; width: 80%; height: 0; margin: 0 auto; padding-top: 48.96%; }
+div.slide > div.form > a { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 0 40px #dbdbdb; opacity: 0; z-index: 1; }
+div.slide > div.form > a > img { display: block; width: 100%; height: 100%; }
+div.slide > div.form > a > div { position: absolute; bottom: 0; left: 0; padding: 10px; text-align:left;}
+div.slide > div.form > a > div > p.art_title { display: none; }
+div.slide > div.form > a > div > p.art_desc { font-family: 'NotoSansKR-Medium'; font-size: 0.875em; color: #7ac3d1; }
+
+div.slide > div.form > a.prev { opacity: 0; z-index: 4; transform: translate(-20%, 20%) scale(1.2);}
+div.slide > div.form > a.cur { opacity: 1; z-index: 3; transform: translate(-1%, -1%) scale(1);}  
+div.slide > div.form > a.next { opacity: 0.7; z-index: 2; transform: translate(4%, -8%) scale(0.95); } 
+div.slide > div.form > a.standby  { opacity: 0; z-index: 1; transform: translate(9%, -15%) scale(0.9); }
+
+
+/*------------------------------------------ContactMe영역-----------------------------------------*/
+    
+section > article.atc_contactme { width: 100%; padding: calc(6.6vh) 0; background: url("../images/img_contact.jpg") no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; text-align: center; }
+section > article.atc_contactme > p { display: inline-block; width: 200px; height: 56px; }
+section > article.atc_contactme > p > span { display: inline-block; }
+section > article.atc_contactme > p > span.phone { position: relative; color: #000; line-height: 28px; text-align: center;}
+section > article.atc_contactme > p > span.phone:before { display: block; content: ""; position: absolute; top: 0; left: -30px; width: 24px; height: 28px; background: url("../images/ico_phone.png") no-repeat center center; }
+section > article.atc_contactme > p > span.email { position: relative; color: #000; line-height: 28px;}
+section > article.atc_contactme > p > span.email:before { display: block; content: ""; position: absolute; top: 0; left: -30px; width: 24px; height: 28px; background: url("../images/ico_email.png") no-repeat center center; }
+section > article.atc_contactme > form { width: 80%;  margin: 10% 10%; }
+section > article.atc_contactme > form > div.inputs > input { width: 100%; height: 40px; padding: 10px 25px; font-family: 'NotoSansKR-Medium'; font-size: 1em; border: none; color: #000;}
+section > article.atc_contactme > form > div.inputs > input:last-child { margin-top: 10px;}
+section > article.atc_contactme > form > textarea { width: 100%; height: 150px; margin-top: 10px; padding: 10px 25px; font-family: 'NotoSansKR-Medium'; font-size: 1em; border: none; resize: none; }
+section > article.atc_contactme > form > div.submit > input { float: right; width: 100%; height: 50px; margin-top: 40px; font-family: 'NotoSansKR-Medium'; font-size: 1.125em; background: #7ac3d1; border: none; color: #fff; cursor: pointer; }
+    
+  
+/*-------------------------------------------모달팝업영역--------------------------------------------*/
+
+div.modal_popup { display: none; position: fixed; width: 100%; height: 100%; background: rgba(0,0,0,1); top: 0; left: 0; z-index: 900;}
+div.modal_popup > a.close { position: absolute; top:4%; right: 4%; width: 50px; height:50px; background: url("../images/ico_close.png") no-repeat; border: 0; opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_left { position: absolute; top: 50%; left: 4%; width: 29px; height: 56px; background: url("../images/ico_left_W.png") no-repeat; background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_right { position: absolute; top: 50%; right: 4%; width: 29px; height: 56px; background: url("../images/ico_right_W.png") no-repeat;background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a { display: none; z-index: 910; }
+div.modal_popup > a:hover { opacity: 1; }
+div.modal_popup > div { position: relative; width: 80%; height: 100%; margin:0 auto;  }
+div.modal_popup > div > img { display: none; position: absolute; top: 50%; left: 50%; max-width:100%; max-height: 100%; margin:0 auto; transform: translate(-50%,-50%); }
+
+
+
+}
+
+/* -- tablet( 768px ~ 1024px ) -- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+      
+    
+/*------------------------------------비쥬얼영역---------------------------------------*/
+
+section > article.atc_visual { position: relative; width: 100%; height: calc(100vh - 100px); margin-top: 100px; background: url("../images/img_visual_01.jpg") no-repeat; background-size: cover; background-position: center center; text-align: center;}
+section > article.atc_visual > div.visual_title { padding-top: calc(100vh / 3); }
+section > article.atc_visual > div.visual_title > p.sup_title { margin-bottom: 5px; font-size: 1.3em; color: #ccc; }
+section > article.atc_visual > div.visual_title > p.main_title { position: relative; display: block; font-family: 'NotoSansKR-Medium'; font-size: 2em; color: #fff; }
+section > article.atc_visual > div.scroll { position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); }
+section > article.atc_visual > div.scroll > div { position: relative; width: 34px; height: 40px; margin: 0 auto; }
+section > article.atc_visual > div.scroll > div > span.animation { display: block; position: absolute; top: 0; left: 0; width: 34px; height: 12px;  background: url("../images/ico_scroll.png") no-repeat;
+    animation-name: scroll; animation-duration: 1.5s;  animation-iteration-count: infinite; }
+section > article.atc_visual > div.scroll > p { color: #fff; }
+
+@keyframes scroll {
+    from { 
+        top: 0; opacity: 1; transform: scale(1);
+        animation-timing-function: ease;
+    }
+    to {
+        top: 20px; opacity: 0; transform: scale(0.9);
+    }
+}
+    
+/*---------------------------------------About Me영역-------------------------------------------*/
+
+section > article.atc_aboutme {  width: 100%; height: 800px; padding-top: calc(6.6vh); background: #eee; text-align: center; }
+section > article.atc_aboutme > div.inner_wrap > ul > li { position: relative; float: left; width: 31%; height: 0; margin-right: 3.5%; margin-top: calc(5vh); padding-top: 250px; }
+section > article.atc_aboutme > div.inner_wrap > ul > li:last-child { margin-right: 0; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div { overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background: #fff; box-shadow: 0 0 40px #dbdbdb;}
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > img { margin-top: 7%; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > p.ico_title { margin-bottom: 7%; font-family: 'NotoSansKR-Bold'; font-size: 1.125em; color: #7ac3d1;  }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > p.ico_desc { font-size: 0.875em; }
+     
+section > article.atc_aboutme > div.inner_wrap > a { display: block; width: 280px; height: 62px; margin: 0 auto; margin-top: calc(7vh); color: #fff; font-family: 'NotoSansKR-Bold'; line-height: 62px; background: #7ac3d1; }
+section > article.atc_aboutme > div.inner_wrap > a > span { font-family: 'NotoSansKR-Regular'; font-size: 0.875em;  margin-left: 20px; }
+    
+    
+/*-----------------------------------------포트폴리오 영역----------------------------------------*/
+
+section > article.atc_portpolio { padding-top: calc(6.6vh);  padding-bottom: calc(6.6vh); text-align: center; }
+section > article.atc_portpolio > ul.tab { display: inline-block; margin: 0 auto; margin-top: calc(1.5vh); margin-bottom: calc(5vh);}
+section > article.atc_portpolio > ul.tab > li { float: left; margin-right: 10px; }
+section > article.atc_portpolio > ul.tab > li:last-child { margin-right: 0; }
+section > article.atc_portpolio > ul.tab > li > a { display: block; width: 157px; padding: 20px 0; font-family: 'NotoSansKR-Medium'; font-size: 1.125em; color: #999; }
+section > article.atc_portpolio > ul.tab > li:hover > a,
+section > article.atc_portpolio > ul.tab > li.active > a { padding-bottom: 16px; border-bottom: 4px solid #000; font-family: 'NotoSansKR-Bold'; color: #000; }
+
+section > article.atc_portpolio > ul.contents { padding: 0 2%;  }
+section > article.atc_portpolio > ul.contents > li { display: block; float: left; width: 46%; height: auto; margin: 3.4482% 2% 0 2%; border-bottom: 2px solid #ccc; }
+section > article.atc_portpolio > ul.contents > li > a { position: relative; display: block; width: 100%; height: 100%; background: #f5f5f5; }
+section > article.atc_portpolio > ul.contents > li > a > img { display: block; width: 100%; height: 100%;  }
+section > article.atc_portpolio > ul.contents > li > a > div { position: absolute; bottom: 8%; left:0; width: 100%;}
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_title { margin-bottom: 2%; font-family: 'NotoSansKR-Medium'; font-size: 1.25em; color: #333; }
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_desc { font-size: 1.125em; color: #999; }
+
+section > article.atc_portpolio > ul.contents > li.active { animation-name: active; animation-duration: 0.3s;  animation-iteration-count: 1;}
+
+@keyframes active {
+    from { 
+        opacity: 0; transform: scale(0);
+        animation-timing-function: ease;
+    }
+    to {
+        opacity: 1; transform: scale(1);
+    }
+}
+   
+/*--------------------------------------------아트웍영역-------------------------------------------*/
+
+
+section > article.atc_artwork { width: 100%; height: 800px; padding-top: calc(6.6vh); background: #f5f5f5; text-align: center; }
+section > article.atc_artwork > div.inner_wrap > div.slide { position: relative; margin-top: calc(5vh);}
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_prev { position: absolute; top: 50%; left: 2%; height: 112px; width: 57px; background: url("../images/ico_left_B.png") no-repeat center center; text-indent: -9999em; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_next { position: absolute; top: 50%; right: 2%; height: 112px; width: 57px; background: url("../images/ico_right_B.png") no-repeat center center; text-indent: -9999em; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations { display: inline-block; margin: 0 auto; margin-top: 50px; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li { float: left; width: 60px; height: 6px; margin-right: 20px; background: #999; transition: color 0.5s;}
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li:last-child { margin-right: 0; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li.sel { background: black; }
+
+/*---------------------------------------아트웍영역_슬라이드-----------------------------------------*/
+    
+div.slide > div.form { position: relative; width: 80%; height: 0; margin: 0 auto; padding-top: 48.96%; }
+div.slide > div.form > a { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 0 40px #dbdbdb; opacity: 0; z-index: 1; }
+div.slide > div.form > a > img { display: block; width: 100%; height: 100%; }
+div.slide > div.form > a > div { position: absolute; bottom: 0; left: 0; padding: 20px; text-align:left;}
+div.slide > div.form > a > div > p.art_title { font-family: 'NotoSansKR-Medium'; font-size: 1.25em; color: #7ac3d1; }
+div.slide > div.form > a > div > p.art_desc { font-family: 'NotoSansKR-Medium'; font-size: 1.5em; color: #000; }
+
+div.slide > div.form > a.prev { opacity: 0; z-index: 4; transform: translate(-20%, 20%) scale(1.2);}
+div.slide > div.form > a.cur { opacity: 1; z-index: 3; transform: translate(-1%, -1%) scale(1);}  
+div.slide > div.form > a.next { opacity: 0.7; z-index: 2; transform: translate(4%, -8%) scale(0.95); } 
+div.slide > div.form > a.standby  { opacity: 0; z-index: 1; transform: translate(9%, -15%) scale(0.9); }
+
+
+/*------------------------------------------ContactMe영역-----------------------------------------*/
+    
+section > article.atc_contactme { width: 100%; height: calc(100vh - 200px); min-height: 720px; max-height: 980px; padding-top: calc(6.6vh); background: url("../images/img_contact.jpg") no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; text-align: center; }
+section > article.atc_contactme > p > span.phone { position: relative; margin-right: 80px; color: #000;}
+section > article.atc_contactme > p > span.phone:before { display: block; content: ""; position: absolute; top: -2px; left: -30px; width: 24px; height: 28px; background: url("../images/ico_phone.png") no-repeat center center; }
+section > article.atc_contactme > p > span.email { position: relative; color: #000;}
+section > article.atc_contactme > p > span.email:before { display: block; content: ""; position: absolute; top: -2px; left: -30px; width: 24px; height: 28px; background: url("../images/ico_email.png") no-repeat center center; }
+section > article.atc_contactme > form { width: 80%;  margin: 0 10%; margin-top: calc(15vh);}
+section > article.atc_contactme > form > div.inputs > input { width: 47.905%; height: 70px; margin-right: 3.6%; padding: 20px 35px; font-family: 'NotoSansKR-Medium'; font-size: 1em; border: none; color: #000;}
+section > article.atc_contactme > form > div.inputs > input:last-child { margin-right: 0; }
+section > article.atc_contactme > form > textarea { width: 100%; height: 150px; margin-top: 20px; padding: 20px 35px; font-family: 'NotoSansKR-Medium'; font-size: 1em; border: none; resize: none; }
+section > article.atc_contactme > form > div.submit input { float: right; width: 48%; height: 70px; margin-top: 40px; font-family: 'NotoSansKR-Medium'; font-size: 1.125em; background: #7ac3d1; border: none; color: #fff; cursor: pointer; }
+    
+    
+/*-------------------------------------------모달팝업영역--------------------------------------------*/
+
+div.modal_popup { display: none; position: fixed; width: 100%; height: 100%; background: rgba(0,0,0,1); top: 0; left: 0; z-index: 900;}
+div.modal_popup > a.close { position: absolute; top:4%; right: 4%; width: 50px; height:50px; background: url("../images/ico_close.png") no-repeat; border: 0; opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_left { position: absolute; top: 50%; left: 4%; width: 29px; height: 56px; background: url("../images/ico_left_W.png") no-repeat; background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_right { position: absolute; top: 50%; right: 4%; width: 29px; height: 56px; background: url("../images/ico_right_W.png") no-repeat;background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a { display: none; z-index: 910; }
+div.modal_popup > a:hover { opacity: 1; }
+div.modal_popup > div { position: relative; width: 80%; height: 100%; margin:0 auto;  }
+div.modal_popup > div > img { display: none; position: absolute; top: 50%; left: 50%; max-width:100%; max-height: 100%; margin:0 auto; transform: translate(-50%,-50%); }
+
+
+}
+
+/* -- desktop( 1025px ~ ? ) -- */
+@media screen and (min-width: 1025px) {
+
+    
+/*------------------------------------비쥬얼영역---------------------------------------*/
+
+section > article.atc_visual { position: relative; width: 100%; height: 100vh; min-height:720px; background: url("../images/img_visual_01.jpg") no-repeat center center; background-size: cover;  text-align: center;}
+section > article.atc_visual > div.visual_title { padding-top: calc(100vh / 3);}
+section > article.atc_visual > div.visual_title > p.sup_title { margin-bottom: 20px; font-size: 1.875em; color: #ccc; }
+section > article.atc_visual > div.visual_title > p.main_title { position: relative; display: inline-block; font-family: 'NotoSansKR-Medium'; font-size: 3.125em; color: #999; white-space: nowrap;}
+section > article.atc_visual > div.visual_title > p.main_title:before { content: attr(data-ani); overflow: hidden; display: inline-block;
+    position: absolute;  top:0; left:0; width: 0%; color: #fff; transition: width 2s;}
+section > article.atc_visual > div.visual_title > p.main_title.on:before {  width: 100%; color: #fff; }
+section > article.atc_visual > div.scroll { position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); }
+section > article.atc_visual > div.scroll > div { position: relative; width: 34px; height: 40px; margin: 0 auto; }
+section > article.atc_visual > div.scroll > div > span.animation { display: block; position: absolute; top: 0; left: 0; width: 34px; height: 12px;  background: url("../images/ico_scroll.png") no-repeat;
+    animation-name: scroll; animation-duration: 1.5s;  animation-iteration-count: infinite; }
+section > article.atc_visual > div.scroll > p { color: #fff; }
+
+@keyframes scroll {
+    from { 
+        top: 0; opacity: 1; transform: scale(1);
+        animation-timing-function: ease;
+    }
+    to {
+        top: 20px; opacity: 0; transform: scale(0.9);
+    }
+}
+    
+/*---------------------------------------About Me영역-------------------------------------------*/
+
+section > article.atc_aboutme {  width: 100%; height: calc(100vh - 100px); min-height: 800px; max-height: 980px; padding-top: calc(6.6vh); background: #eee; text-align: center; }
+section > article.atc_aboutme > div.inner_wrap > ul > li { position: relative; float: left; width: 31%; height: 0; margin-right: 3.5%; margin-top: calc(5vh); padding-top: 26%; }
+section > article.atc_aboutme > div.inner_wrap > ul > li:last-child { margin-right: 0; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div { overflow: hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;  background: #fff; box-shadow: 0 0 40px #dbdbdb;}
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > img { margin-top: 7%; }
+section > article.atc_aboutme > div.inner_wrap > ul > li > div > p.ico_title { margin-bottom: 7%; font-family: 'NotoSansKR-Bold'; font-size: 1.125em; color: #7ac3d1;  }
+    
+section > article.atc_aboutme > div.inner_wrap > a { display: block; width: 280px; height: 62px; margin: 0 auto; margin-top: calc(7vh); color: #fff; font-family: 'NotoSansKR-Bold'; line-height: 62px; background: #7ac3d1; }
+section > article.atc_aboutme > div.inner_wrap > a > span { font-family: 'NotoSansKR-Regular'; font-size: 0.875em;  margin-left: 20px; }
+    
+    
+/*-----------------------------------------포트폴리오 영역----------------------------------------*/
+
+section > article.atc_portpolio { padding-top: calc(6.6vh);  padding-bottom: calc(6.6vh); text-align: center; }
+section > article.atc_portpolio > ul.tab { display: inline-block; margin: 0 auto; margin-top: 20px; margin-bottom: calc(5vh);}
+section > article.atc_portpolio > ul.tab > li { float: left; margin-right: 10px; }
+section > article.atc_portpolio > ul.tab > li:last-child { margin-right: 0; }
+section > article.atc_portpolio > ul.tab > li > a { display: block; width: 157px; padding: 20px 0; font-family: 'NotoSansKR-Medium'; font-size: 1.125em; color: #999; }
+section > article.atc_portpolio > ul.tab > li:hover > a,
+section > article.atc_portpolio > ul.tab > li.active > a { padding-bottom: 16px; border-bottom: 4px solid #000; font-family: 'NotoSansKR-Bold'; color: #000; }
+
+section > article.atc_portpolio > ul.contents { padding: 0 2%; }
+section > article.atc_portpolio > ul.contents > li { display: block; float: left; width: 46%; height: auto; margin: 3.4482% 2% 0 2%; border-bottom: 2px solid #ccc; }
+section > article.atc_portpolio > ul.contents > li > a { position: relative; display: block; width: 100%; height: 100%; background: #f5f5f5; }
+section > article.atc_portpolio > ul.contents > li > a > img { display: block; width: 100%; height: 100%;  }
+section > article.atc_portpolio > ul.contents > li > a > div { position: absolute; bottom: 8%; left:0; width: 100%;}
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_title { margin-bottom: 3%; font-family: 'NotoSansKR-Medium'; font-size: 1.5em; color: #333; }
+section > article.atc_portpolio > ul.contents > li > a > div > p.port_desc { font-size: 1.125em; color: #999; }
+
+section > article.atc_portpolio > ul.contents > li.active { animation-name: active; animation-duration: 0.3s;  animation-iteration-count: 1;}
+
+@keyframes active {
+    from { 
+        opacity: 0; transform: scale(0);
+        animation-timing-function: ease;
+    }
+    to {
+        opacity: 1; transform: scale(1);
+    }
+}
+   
+/*--------------------------------------------아트웍영역-------------------------------------------*/
+
+
+section > article.atc_artwork { width: 100%; height: calc(100vh - 100px); min-height: 800px; max-height: 980px; padding-top: calc(6.6vh); background: #f5f5f5; text-align: center; }
+section > article.atc_artwork > div.inner_wrap > div.slide { position: relative; height: 540px; margin-top: calc(5vh);}
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_prev { position: absolute; top: 50%; left: 2%; height: 112px; width: 57px; background: url("../images/ico_left_B.png") no-repeat center center; text-indent: -9999em; opacity: 0.5; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > div.slide > a.slide_next { position: absolute; top: 50%; right: 2%; height: 112px; width: 57px; background: url("../images/ico_right_B.png") no-repeat center center; text-indent: -9999em; opacity: 0.5; transform: translateY(-50%); z-index: 10; }
+section > article.atc_artwork > div.inner_wrap > div.slide > a:hover { opacity: 1; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations { display: inline-block; margin: 0 auto; margin-top: 30px; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li { float: left; width: 60px; height: 6px; margin-right: 20px; background: #999; transition: color 0.5s;}
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li:last-child { margin-right: 0; }
+section > article.atc_artwork > div.inner_wrap > ul.paginations > li.sel { background: black; }
+
+/*---------------------------------------아트웍영역_슬라이드-----------------------------------------*/
+    
+div.slide > div.form { position: relative; width: 847px; height: 540px; margin: 0 auto;}
+div.slide > div.form > a { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 0 40px #dbdbdb; opacity: 0; z-index: 1; }
+div.slide > div.form > a > img { display: block; width: 100%; height: 100%; }
+div.slide > div.form > a > div { position: absolute; bottom: 0; left: 0; padding: 20px; text-align:left;}
+div.slide > div.form > a > div > p.art_title { font-family: 'NotoSansKR-Medium'; font-size: 1.5625em; color: #7ac3d1; }
+div.slide > div.form > a > div > p.art_desc { font-family: 'NotoSansKR-Medium'; font-size: 1.875em; color: #000; }
+
+div.slide > div.form > a.prev { opacity: 0; z-index: 4; transform: translate(-20%, 20%) scale(1.2);}
+div.slide > div.form > a.cur { opacity: 1; z-index: 3; transform: translate(-1%, -1%) scale(1);}  
+div.slide > div.form > a.next { opacity: 0.7; z-index: 2; transform: translate(4%, -8%) scale(0.95); } 
+div.slide > div.form > a.standby  { opacity: 0; z-index: 1; transform: translate(9%, -15%) scale(0.9); }
+
+
+/*------------------------------------------ContactMe영역-----------------------------------------*/
+    
+section > article.atc_contactme { width: 100%; height: calc(100vh - 100px); min-height: 800px; max-height: 980px; padding-top: calc(6.6vh); background: url("../images/img_contact.jpg") no-repeat center center; background-size: cover; background-attachment: fixed; text-align: center; }
+section > article.atc_contactme > p > span.phone { position: relative; margin-right: 80px; color: #000;}
+section > article.atc_contactme > p > span.phone:before { display: block; content: ""; position: absolute; top: 0; left: -30px; width: 24px; height: 28px; background: url("../images/ico_phone.png") no-repeat center center; }
+section > article.atc_contactme > p > span.email { position: relative; color: #000;}
+section > article.atc_contactme > p > span.email:before { display: block; content: ""; position: absolute; top: 0; left: -30px; width: 24px; height: 28px; background: url("../images/ico_email.png") no-repeat center center; }
+section > article.atc_contactme > form { width: 80%; max-width: 1024px; margin: 0 auto; margin-top: calc(15vh);}
+section > article.atc_contactme > form > div > input { width: 48.202%; height: 70px; padding: 20px 35px; font-family: 'NotoSansKR-Medium'; font-size: 1.375em; border: none; color: #000;}
+section > article.atc_contactme > form > div.inputs > input:first-child { margin-right: 3.60% !important; }
+section > article.atc_contactme > form > textarea { width: 100%; height: 150px !important; margin-top: 20px; padding: 20px 35px; font-family: 'NotoSansKR-Medium'; font-size: 1.375em; border: none; resize: none; }
+section > article.atc_contactme > form > div.submit > input { float: right; width: 48%; height: 70px; margin-top: 40px; font-family: 'NotoSansKR-Medium'; font-size: 1.375em; background: #7ac3d1; border: none; color: #fff; cursor: pointer; }
+
+    
+/*-------------------------------------------모달팝업영역--------------------------------------------*/
+
+div.modal_popup { display: none; position: fixed; width: 100%; height: 100%; background: rgba(0,0,0,1); top: 0; left: 0; z-index: 900;}
+div.modal_popup > a.close { position: absolute; top:4%; right: 4%; width: 50px; height:50px; background: url("../images/ico_close.png") no-repeat; border: 0; opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_left { position: absolute; top: 50%; left: 4%; width: 29px; height: 56px; background: url("../images/ico_left_W.png") no-repeat; background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a.modal_right { position: absolute; top: 50%; right: 4%; width: 29px; height: 56px; background: url("../images/ico_right_W.png") no-repeat;background-size: cover; transform: translateY(-50%); opacity: 0.5; text-indent: -9999em; }
+div.modal_popup > a { display: none; z-index: 910; }
+div.modal_popup > a:hover { opacity: 1; }
+div.modal_popup > div { position: relative; width: 80%; height: 100%; margin:0 auto;  }
+div.modal_popup > div > img { display: none; position: absolute; top: 50%; left: 50%; max-width:100%; max-height: 100%; margin:0 auto; transform: translate(-50%,-50%); }
+
+}
