@@ -1,0 +1,231 @@
+/* -- mobile( ? ~ 767px ) -- */
+@media screen and (max-width: 767px) {
+
+   
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; }
+   
+    header { position: fixed; top: 0; width: 100%; height: 60px; background:#000; z-index: 20;}
+	header > div { position: relative; }
+    header > div > a.btn_toggle { display: block; width: 60px; height: 60px; background: url("../images/btn_toggle_W.png") no-repeat center center; text-indent: -9999em;}
+    header > div > a.btn_lang {display: none;}
+    header > div > div.right_menu { display: none; }
+    header > div > h1 { position: absolute; left: 50%; top:50%; ; width:118px; height: 19px; background: url("../images/logo_B.png") no-repeat; transform: translate(-50%, -50%); background-size: cover; text-indent: -9999em; }
+   
+    header > nav { display: none; position: absolute; top:0; left: 0; width: 100vw; height: 100vh; background: #fff; z-index: 100; }
+    header > nav > div.top_bar { width: 100%; height: 60px; border-bottom: 1px solid #000; }
+	header > nav > div.top_bar > form { display: inline-block; width: calc(100% - 60px); height: 60px; padding: 10px 0 10px 20px;}
+    header > nav > div.top_bar > form > input { display: inline-block; width: calc(100% - 40px); height: 40px; padding-left: 10px; border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0;  }
+    header > nav > div.top_bar > form > button { width: 40px; height: 40px;  border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0; background: url("../images/ico_search_B.png") no-repeat center center; vertical-align: middle; }
+    header > nav > div.top_bar > a { float: right; display: inline-block; width: 60px; height: 60px; background: url("../images/btn_close.png") no-repeat center center; text-indent: -9999em; }
+
+    header > nav > div.nav { float: left; position: relative;  width: 35%; height: calc(100% - 60px); background: #000; text-align: center; }
+	header > nav > div.nav > ul.main_nav > li { height: 60px; }
+	header > nav > div.nav > ul.main_nav > li.active { background: #fff; }
+	header > nav > div.nav > ul.main_nav > li.active > a { color: #000; }
+	header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; font-size: 1.125em; color: #fff; line-height: 60px; }
+	header > nav > div.nav > ul.sub_menu { position: absolute; bottom: 30px; left: 0; width: 100%; }
+	header > nav > div.nav > ul.sub_menu > li { height: 30px; }
+	header > nav > div.nav > ul.sub_menu > li > a { font-size: 0.875em; color: #fff;  line-height: 30px; }
+	header > nav > div.subnav { overflow: scroll; float: left; width: 65%; height: calc(100% - 60px); padding: 20px; }
+	header > nav > div.subnav > ul { margin-top: 30px; }
+	header > nav > div.subnav > ul:first-child { margin-top: 0; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #777; z-index: 20; }
+
+
+    
+    section { margin-top: 60px; }
+    section > article.atc_visual { width: 100%; height: 200px;  background: url("../images/img_top_03.jpg") no-repeat center center; background-size: cover;}
+
+    section > article.atc_filter > div { padding: 10px;}
+    section > article.atc_filter > div > p { display: none;}
+    section > article.atc_filter > div > p > a { font-size: 1em; color: #777; padding: 0 7px;}
+    section > article.atc_filter > div > span.cur { padding-left: 7px; font-size: 0.875em; color: #000;}
+
+    section > hr { border: none; width: 100%; height: 1px; background: #ccc; }
+
+    section > article.atc_contents { text-align: center; }
+    section > article.atc_contents > h2 { margin-top: 40px; font-family: "NotosansKR-Medium"; font-size: 1.875em; }
+    section > article.atc_contents > p { margin: 10px 20px 70px 20px; font-family: "NotosansKR-Medium"; font-size: 1em; }
+    section > article.atc_contents > ul.tap > li {float: left; width: 33.333%; border-bottom: 1px solid #ccc; }
+    section > article.atc_contents > ul.tap > li > a { position: relative; display: block; width: 100%; padding: 10px 0; font-family: "NotosansKR-Medium"; font-size: 1.125em;}
+    section > article.atc_contents > ul.tap > li > a.tap_active:after { content: ""; display: block; position: absolute; bottom: 0; left: 0;  width: 100%; height: 2px; background: #000; z-index: 10; }
+
+    section > article.atc_contents > div.tap_cont { margin: 20px 0 100px 0; }
+    section > article.atc_contents > div.tap_cont > div {padding: 20px 20px;}
+    section > article.atc_contents > div.tap_cont > div > h3 {  font-family: "NotosansKR-Medium"; font-size: 1.375em; margin-bottom: 5px;}
+    section > article.atc_contents > div.tap_cont > img { display: block; width: calc(100% - 40px); margin:0 20px; }
+    section > article.atc_contents > div.tap_cont > hr { display: none; }
+    section > article.atc_contents > div.tap_cont > p { padding: 20px 20px 0 20px; }
+
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul > li { padding: 0 20px;}
+    section > article.atc_menu > ul > li > a { position: relative;  display: block; width: 100%; height: 100%; padding: 10px 0; font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li > a > span { position: absolute; top: 17px; right: 0; display: inline-block; width: 16px; height: 8px; background: url("../images/btn_nav_M_on.png") no-repeat center center; background-size: 80%;}
+    section > article.atc_menu > ul > li > ul { display: none; padding: 10px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-family: "NotosansKR-Regular"; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 20px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 2%; font-size: 0.875em; color: #fff;}
+    footer > p.links > a.bold { font-family: "NotosansKR-Bold"; }
+    footer > div.address { margin-top: 30px; font-size: 0.875em; color: #bbb; line-height: 1.2em; word-break: break-all;}
+    footer > div.address > address {  font-style: normal;  }
+    footer > div.address > a { display: block; font-size: 0.875em; color: #bbb; line-height: 1.2em;  margin-bottom: 10px;}
+
+
+}
+
+/* -- tablet( 768px ~ 1024px ) -- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; }
+   
+    header { position: fixed; top: 0; width: 100%; height: 60px; background:#000; z-index: 20;}
+	header > div { position: relative; }
+    header > div > a.btn_toggle { display: block; width: 60px; height: 60px; background: url("../images/btn_toggle_W.png") no-repeat center center; text-indent: -9999em;}
+    header > div > a.btn_lang {display: none;}
+    header > div > div.right_menu { display: none; }
+    header > div > h1 { position: absolute; left: 50%; top:50%; ; width:118px; height: 19px; background: url("../images/logo_B.png") no-repeat; transform: translate(-50%, -50%); background-size: cover; text-indent: -9999em; }
+   
+    header > nav { display: none; position: absolute; top:0; left: 0; width: 70vw; height: 100vh; background: #fff; z-index: 100; }
+    header > nav > div.top_bar { width: 100%; height: 60px; border-bottom: 1px solid #000;}
+	header > nav > div.top_bar > form { display: inline-block; width: calc(100% - 60px); height: 60px; padding: 10px 0 10px 20px;}
+    header > nav > div.top_bar > form > input { display: inline-block; width: calc(100% - 40px); height: 40px; border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0;  }
+    header > nav > div.top_bar > form > button { width: 40px; height: 40px;  border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0; background: url("../images/ico_search_B.png") no-repeat center center; vertical-align: middle; }
+    header > nav > div.top_bar > a { float: right; display: inline-block; width: 60px; height: 60px; background: url("../images/btn_close.png") no-repeat center center; text-indent: -9999em; }
+
+    header > nav > div.nav { float: left;position: relative;  width: 40%; height: calc(100% - 60px); background: #000; text-align: center;}
+	header > nav > div.nav > ul.main_nav > li { height: 60px; }
+	header > nav > div.nav > ul.main_nav > li.active { background: #fff; }
+	header > nav > div.nav > ul.main_nav > li.active > a { color: #000; }
+	header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; font-size: 1.25em; color: #fff; line-height: 60px; }
+	header > nav > div.nav > ul.sub_menu { position: absolute; bottom: 30px; left: 0; width: 100%; }
+	header > nav > div.nav > ul.sub_menu > li { height: 40px; }
+	header > nav > div.nav > ul.sub_menu > li > a { font-size: 1em; color: #fff;  line-height: 40px; }
+	header > nav > div.subnav { overflow: scroll; float: left; width: 60%; height: calc(100% - 60px); padding: 20px; }
+	header > nav > div.subnav > ul { margin-top: 30px; }
+	header > nav > div.subnav > ul:first-child { margin-top: 0; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #777; z-index: 20; }
+
+
+    section { margin-top: 60px; }
+    section > article.atc_visual { width: 100%; height: 420px;  background: url("../images/img_top_03.jpg") no-repeat center center; background-size: cover;}
+
+    section > article.atc_filter > div { padding: 20px 20px 20px 3px;}
+    section > article.atc_filter > div > p { display: inline-block; color: #777;}
+    section > article.atc_filter > div > p > a { font-size: 1em; color: #777; padding: 0 7px;}
+    section > article.atc_filter > div > span.cur { padding-left: 7px; font-size: 1em; color: #000;}
+
+    section > hr { border: none; width: 100%; height: 1px; background: #ccc; }
+
+    section > article.atc_contents { text-align: center; }
+    section > article.atc_contents > h2 { margin-top: 90px; font-family: "NotosansKR-Medium"; font-size: 3.75em; }
+    section > article.atc_contents > p { margin: 20px 0 110px 0; font-family: "NotosansKR-Medium"; font-size: 1.125em; }
+    section > article.atc_contents > ul.tap > li {float: left; width: 33.333%; border-bottom: 1px solid #ccc; }
+    section > article.atc_contents > ul.tap > li > a { position: relative; display: block; width: 100%; padding: 20px 0; font-family: "NotosansKR-Medium"; font-size: 1.25em;}
+    section > article.atc_contents > ul.tap > li > a.tap_active:after { content: ""; display: block; position: absolute; bottom: 0; left: 0;  width: 100%; height: 2px; background: #000; z-index: 10; }
+
+    section > article.atc_contents > div.tap_cont { margin: 20px 0 100px 0; }
+    section > article.atc_contents > div.tap_cont > div {padding: 20px 20px;}
+    section > article.atc_contents > div.tap_cont > div > h3 {  font-family: "NotosansKR-Medium"; font-size: 1.875em; margin-bottom: 10px;}
+    section > article.atc_contents > div.tap_cont > img { display: block; width: calc(100% - 40px); margin:0 20px; }
+    section > article.atc_contents > div.tap_cont > hr { display: none; }
+    section > article.atc_contents > div.tap_cont > p { padding: 20px 20px 0 20px; }
+   
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul { padding: 50px 40px; }
+    section > article.atc_menu > ul > li { float: left; margin-right: 17.4%; }
+    section > article.atc_menu > ul > li > a { font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li:last-child { margin-right: 0; }
+    section > article.atc_menu > ul > li > ul { margin-top: 20px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-family: "NotosansKR-Regular"; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 30px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 40px; border-right: 1px solid #fff; font-size: 1em; color: #fff;}
+    footer > p.links > a:last-child { border-right: none;}
+    footer > div.address { margin-top: 55px; font-size: 0.875em; color: #bbb; line-height: 1.5625em; }
+    footer > div.address > address { display: inline-block; font-style: normal;  }
+    footer > div.address > a { display: inline-block; font-size: 0.875em; color: #bbb; line-height: 1.2em; }
+    footer > div.address > br.br_d, br.br_m {display: none; }
+
+}
+
+/* -- desktop( 1025px ~ ? ) -- */
+@media screen and (min-width: 1025px) {
+
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; }
+   
+    header { position: fixed; top: 0; width: 100%; height: 131px; background: #000; z-index: 20;   }
+    header > div { padding-top: 10px; }
+    header > div > a.btn_toggle { display: none; }
+    header > div > a.btn_lang {display: block; float: left; margin-left: 5%; font-size: 0.875em; color: #fff;}
+    header > div > a.btn_lang > span { display: inline-block; margin-left: 10px; margin-top: -2px; font-size: 0.4em; color: #fff; vertical-align: middle; }
+    header > div > div.right_menu { float: right; margin-right: 5%; }
+    header > div > div.right_menu > a { margin-right: 15px; font-size: 0.875em; color: #fff; }
+    header > div > div.right_menu > form { display: inline-block; }
+    header > div > div.right_menu > form > input { display: none; }
+    header > div > div.right_menu > form > input.active[type="search"] { display: inline-block; width: 160px; height: 30px; border-bottom: 1px solid #fff; border-top: 0; border-left: 0; border-right: 0; }
+    header > div > div.right_menu > form > button { width: 30px; height: 30px; border: 0; background: url("../images/ico_search.png") no-repeat center center; vertical-align: middle; }
+    header > div > h1 { clear: both; position: relative; left: 50%; width:198px; height: 32px; background: url("../images/logo_W.png") no-repeat; transform: translateX(-50%); text-indent: -9999em; }
+   
+    header > nav > div.top_bar { display: none; }
+    header > nav > div.nav > ul.main_nav { padding: 20px 15% 0 15%; }
+    header > nav > div.nav > ul.main_nav > li { float: left; width: 25%; text-align: center; }
+    header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; padding-bottom: 10px; font-family: "NotosansKR-Medium"; font-size: 1.25em; color: #fff;}
+    header > nav > div.nav > ul.sub_menu { display: none; }
+    header > nav > div.subnav { padding: 20px 15%; background: #fff; box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.1);}
+    header > nav > div.subnav > ul { float: left; width: 25%; text-align: center; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; color: #000; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #777; z-index: 20; }
+
+    section { margin-top: 100px; }
+    section > article.atc_visual { width: 100%; height: 350px;  background: url("../images/img_top_03.jpg") no-repeat center center; background-size: cover; }
+
+    section > article.atc_filter > div { padding: 20px 20px 20px 3px;}
+    section > article.atc_filter > div > p { display: inline-block; color: #777;}
+    section > article.atc_filter > div > p > a { font-size: 1em; color: #777; padding: 0 7px;}
+    section > article.atc_filter > div > span.cur { padding-left: 7px; font-size: 1em; color: #000;}
+
+    section > hr { border: none; width: 100%; height: 1px; background: #ccc; }
+
+    section > article.atc_contents { text-align: center; }
+    section > article.atc_contents > h2 { margin-top: 90px; font-family: "NotosansKR-Medium"; font-size: 2.5em; }
+    section > article.atc_contents > p { margin: 20px 0 110px 0; font-size: 1.125em; }
+    section > article.atc_contents > ul.tap > li {float: left; width: 33.333%; border-bottom: 1px solid #ccc; }
+    section > article.atc_contents > ul.tap > li > a { position: relative; display: block; width: 100%; padding: 20px 0; font-family: "NotosansKR-Medium"; font-size: 1.25em;}
+    section > article.atc_contents > ul.tap > li > a.tap_active:after { content: ""; display: block; position: absolute; bottom: 0; left: 0;  width: 100%; height: 2px; background: #000; z-index: 10; }
+
+    section > article.atc_contents > div.tap_cont { margin: 20px 0 100px 0; }
+    section > article.atc_contents > div.tap_cont > div { float: left; width: 34.482%; text-align: left; padding: 20px 10px 0 0;}
+    section > article.atc_contents > div.tap_cont > div > h3 {  font-family: "NotosansKR-Medium"; font-size: 1.875em; margin-bottom: 10px;}
+    section > article.atc_contents > div.tap_cont > img { display: block; width: 65.517%; }
+    section > article.atc_contents > div.tap_cont > hr { clear: both; margin: 20px 0; border: 0; width: 100%; height: 1px; background: #ccc;}
+    section > article.atc_contents > div.tap_cont > p { text-align:left; }
+
+
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul { padding: 50px 40px; }
+    section > article.atc_menu > ul > li { float: left; margin-right: 21.8%; }
+    section > article.atc_menu > ul > li > a { font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li:last-child { margin-right: 0; }
+    section > article.atc_menu > ul > li > ul { margin-top: 20px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 30px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 40px; border-right: 1px solid #fff; font-size: 1em; color: #fff;}
+    footer > p.links > a:last-child { border-right: none;}
+    footer > div.address { margin-top: 55px; font-size: 0.875em; color: #bbb; line-height: 1.5625em; }
+    footer > div.address > address { display: inline-block; font-style: normal;  }
+    footer > div.address > a { display: inline-block; font-size: 0.875em; color: #bbb; line-height: 1.2em; }
+    footer > div.address > br.br_t, br.br_m {display: none; }
+
+}
+
+

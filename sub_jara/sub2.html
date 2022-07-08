@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>ZARA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/sub2.css" type="text/css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+
+function displayNav(value){
+    $("nav > div.subnav").addClass("dp_none");
+    $("nav").find('[data-nav="'+value+'"]').removeClass("dp_none");
+
+}
+
+$("nav > div.nav > ul > li").mouseover(function(){
+    var value = $(this).attr("id");
+    console.log(value);
+    displayNav(value);
+});
+
+$("nav > div.subnav").mouseleave(function(){
+    $("nav > div.subnav").addClass("dp_none");
+});
+
+})
+  </script>
+ </head>
+<body>
+    <header>
+        <div class="clearfix">
+            <a class="btn_toggle" href="#">menu</a>
+            <a class="btn_lang" href="#">KOREAN<span>▼</span></a>
+            <div class="right_menu">
+                <a href="#">로그인</a>
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+                <form action="search.jsp" method="post">
+                    <input class="" type="search" placeholder="제품명을 입력하세요" /><!-- 
+                    --><button type="submit"></button>
+                </form>
+            </div>
+            <h1><a class="login" href="#">logo</a></h1>
+        </div>
+        <nav>
+            <div class="top_bar clearfix">
+                <form action="search.jsp" method="post">
+                    <input type="search" placeholder="제품명을 입력하세요" /><!-- 
+                    --><button type="submit"></button>
+                </form>
+                <a href="#">close</a>
+            </div>
+            <div class="nav">
+                <ul class="main_nav clearfix">
+                    <li class="active" id="women"><a href="#">WOMEN</a></li>
+                    <li id="trf"><a href="#">TRF</a></li>
+                    <li id="men"><a href="#">MEN</a></li>
+                    <li id="kids"><a href="#">KIDS</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">KOREAN</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="women">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li><a href="#">특가 상품<span class="sup">NEW</span></a></li>
+                    <li class="br"><a href="#">미니멀 컬렉션</a></li>
+                    <li><a href="#">트위드<span class="sup">NEW</span></a></li>
+                    <li><a href="#">스카프 프린트</a></li>
+                    <li><a href="#">체크</a></li>
+                    <li><a href="#">프리미엄</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">블레이저</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">니트</a></li>
+                    <li><a href="#">맨투맨</a></li>
+                    <li><a href="#">드레스</a></li>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">드레스</a></li>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                    <li><a href="#">바디수트</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">세트</a></li>
+                    <li><a href="#">수트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li><a href="#">악세사리</a></li>
+                    <li class="br"><a href="#">RETRO AESTHETICS<span class="sup">NEW</span></a></li>
+                    <li><a href="#">THE KNITS</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="trf">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li class="br"><a href="#">ALL ABOUT DENIM<span class="sup">NEW</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">맨투맨</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">세트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li class="br"><a href="#">DENIM</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="men">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li><a href="#">베이직 아이템</a></li>
+                    <li><a href="#">특가상품</a></li>
+                    <li class="br"><a href="#">ALL TIME</a></li>
+                    <li><a href="#">STREET</a></li>
+                    <li><a href="#">SHOP BY COLLECTION</a></li>
+                </ul>
+                <ul>
+                    <li class="br_t"><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">블레이저</a></li>
+                    <li><a href="#">셔츠</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">폴로</a></li>
+                    <li><a href="#">맨투맨/후디</a></li>
+                    <li><a href="#">니트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">수트</a></li>
+                    <li><a href="#">조깅</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li><a href="#">악세사리</a></li>
+                    <li><a href="#">수영복</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="kids">
+                <ul>
+                    <li><a href="#">GIRL | 만5세-14세</a></li>
+                    <li><a href="#">BOY | 만5세-14세</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">BABY GIRL | 3개월-만4세</a></li>
+                    <li><a href="#">BABY BOY | 3개월-만4세</a></li>
+                    <li><a href="#">MINI | 0-12개월</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SHOES</a></li>
+                    <li><a href="#">MICKEY'S 90TH!</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">CAMPAIGN</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <section class="contents">
+        <article class="atc_visual">
+        
+        </article>
+        <article class="atc_filter inner_wrap">
+            <div>
+                <p><a href="#">HOME</a>><a href="#">ZARA 스토리</a>></p>
+                <span class="cur">지역 사회 지원</span>
+            </div>
+        </article>
+        <hr>
+        <article class="atc_contents inner_wrap">
+            <h2>지역 사회 지원</h2>
+            <p>INDITEX는 공동체 개발을 위한 사회 프로젝트에 협력하고 있습니다.</p>
+            <ul class="tap clearfix">
+                <li><a class="tap_active" href="#">사회 복지</a></li>
+                <li><a href="#">교육</a></li>
+                <li><a href="#">인도 지원</a></li>
+            </ul>
+            <div class="tap_cont">
+                <div>
+                    <h3>사회 통합 프로그램</h3>
+                    <p>취약 계층을 위한 사회 통합 프로그램을 통해 공동체를 발전시키는 이니셔티브를 수행하고 있습니다.</p>
+                </div>
+                <img src="images/img_middle_03_01.jpg" alt="" />
+                <hr>
+                <p>Salta 프로그램을 통해 사회적 배제 위험이 있고 취업 시장에 접근하기 어려운 사람들을 우리 기업의 매장, 공장 그리고 유통 센터 등에 포용하는 사업을 추진하고 있습니다. 현재 12개의 도시(뉴욕, 
+                        멕시코 시티, 상파울루, 리스본, 마드리드, 바르셀로나, 파리, 런던, 밀라노, 함부르크, 아테네 및 바르샤바)에서 추진되고 있는 이 프로그램에는 550명 이상이 참여하고 있으며 더 많은 도시에 도입하기 위해 
+                        노력하고 있습니다. 이 프로젝트를 위한 교육 및 활동은 강사나 자원봉사자로 참여하는 수백 명의 직원의 협력 덕분에 원활하게 추진될 수 있었습니다.<br><br>  또한, 우리는 전 세계 다양한 단체의 프로젝트 개발을 
+                        후원하기도 합니다.  스페인 내 취업 및 창업을 조성하는 프로젝트를 지원하고 방글라데시와 캄보디아의 불우한 이웃을 위한 지역사회 개발 프로그램을 추진하는 카리타스를 지원합니다. 
+                        Every Mother Counts와 협력하여 전 세계의 어머니들이 기본적인 모자 보건의 혜택을 받을 수 있도록 돕고 있습니다.<br><br>  저희는 2015년부터 방글라데시와 캄보디아에 식수 및 위생 시설 설치를 위한 소액 
+                        신용대출을 제공하는 단체 Water.org와 협력하고 있습니다. 이 단체는 New Venture Fund를 통해 개발도상국 지역사회에서 식수와 위생 시설 설비를 확보할 수 있는 새로운 방법을 모색하는 연구를 
+                        조성하기도 합니다.</p>
+            </div>
+            <div class="tap_cont dp_none">
+                <div>
+                    <h3>교육 프로그램</h3>
+                    <p>긍정적인 사회 변화의 원동력인 교육 개선을 추진하기 위해 여러 국가에서 다양한 프로그램을 개발하고 있습니다.</p>
+                </div>
+                <img src="images/img_middle_03_02.jpg" alt="" />
+                <hr>
+                <p>본사는 2001년부터 비정부단체인 Entreculturas와 함께 아프리카, 아시아 그리고 아메리카 11개국의 취약한 환경의 집단, 특히 젊은이들에게 초점을 맞춘 기술 및 전문 교육 프로그램을 제공하고 있습니다.
+                    <br><br>또한, 중국에서는 중국 청소년 개발 재단과 함께 교사를 육성하고 시골 지역의 학교를 건설 및 개조하는 사업을 진행하고 있습니다.
+                        학문적인 측면에서 우리 기업은 여러 대학과 협력하여 사회 문제에 관한 연구에 참가하고 있습니다. 현재 Pontificia de Comillas 대학, Santiago de Compostela 대학, A Coruña 대학, 알리칸테의 
+                        Miguel Hernández 대학, 다카 대학(방글라데시) 및 칭화 대학(중국) 등과 같은 대학에서 협력 네트워크를 구축하여 대학생들을 위한 특별 장학금 프로그램도 운영합니다.</p>
+            </div>
+            <div class="tap_cont dp_none">
+                <div>
+                    <h3>인도주의적 지원</h3>
+                    <p>자연재해 또는 무력 총돌과 같은 비상사태 발생 시 다양한 긴급 지원을 제공합니다.</p>
+                </div>
+                <img src="images/img_middle_03_03.jpg" alt="" />
+                <hr>
+                <p>INDITEX의 인도주의적 지원 프로그램은 자연재해 또는 무력 충돌과 같은 비상사태에 지원을 제공하는 데 초점을 맞춥니다.  2011년부터 국경 없는 의사회 긴급 구조부와 인도주의적 위기 상황에 대응하는 데 
+                        필요한 자원을 확보할 수 있도록 정기적으로 협력해 왔습니다. 이 장기적인 협력 프로젝트에 추가하여 전 세계 비상사태 발생 시 다양한 긴급 지원 활동을 펼치기도 합니다.<br><br>  2016년도 우리 기업은 시리아, 
+                        예멘, 나이지리아의 무력 충돌 및 이탈리아와 에콰도르 지진 피해자들의 생명, 건강 그리고 복지를 보호하기 위한 수많은 지원 프로젝트에 참여하였습니다.  그리고 2017년에는 멕시코 적십자와 함께 비상 
+                        프로그램을 기획 및 추진하여 멕시코 지진 피해자들을 돕는 데 노력을 기울이기도 하였습니다.</p>
+            </div>
+        </article>
+        <article class="atc_menu">
+            <ul class="inner_wrap clearfix">
+                <li><a href="#">ZARA 제품<span></span></a>
+                   <ul>
+                       <li><a href="#">2018 컬렉션</a></li>
+                       <li><a href="#">BEST SELLER</a></li>
+                       <li><a href="#">여성</a></li>
+                       <li><a href="#">TRF</a></li>
+                       <li><a href="#">남성</a></li>
+                       <li><a href="#">아동</a></li>
+                   </ul> 
+                </li>
+                <li><a href="#">ZARA 스토리<span></span></a>
+                    <ul>
+                        <li><a href="#">헌 옷 방문 수거</a></li>
+                        <li><a href="#">원재료 소개</a></li>
+                        <li><a href="#">공급업체 소개</a></li>
+                        <li><a href="#">지역 사회 지원</a></li>
+                        <li><a href="#">2017연간 보고서</a></li>
+                        <li><a href="#">GREEN WEB</a></li>
+                    </ul> 
+                 </li>
+                 <li><a href="#">구매가이드<span></span></a>
+                    <ul>
+                        <li><a href="#">구매 방법</a></li>
+                        <li><a href="#">일반 정보</a></li>
+                        <li><a href="#">지불</a></li>
+                        <li><a href="#">발송</a></li>
+                        <li><a href="#">교환 및 환불</a></li>
+                        <li><a href="#">리콜 상품</a></li>
+                        <li><a href="#">내 계정</a></li>
+                    </ul> 
+                 </li>
+                 <li><a href="#">FOLLOW<span></span></a>
+                    <ul>
+                        <li><a href="#">뉴스레터</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">TWITTER</a></li>
+                        <li><a href="#">YOUTUBE</a></li>
+                    </ul> 
+                 </li>
+            </ul>
+        </article>
+    </section>  
+    <footer>
+            <p class="links">
+                <a class="bold" href="#">개인정보취급방침</a>
+                <a href="#">이용약관</a>
+                <a href="#">회사소개</a>
+                <a href="#">매장안내</a>
+            </p>
+            <div class="address">아이티엑스코리아 유한회사 ｜<br class="br_m"> 사업자등록번호: 120-88-14733 ｜<br class="br_m"> 대표자 : ROMAY DE LA COLINA JOSE MANUEL ｜ <br class="br_t"><address>서울시 강남구 영동대로 511 <br class="br_m">(삼성동, 트레이드타워 33층)</address><br class="br_d">
+            대표번호: 080-479-0880 ｜<br class="br_m"> 이메일: contact.kr@zara.com ｜<br class="br_t"> 호스팅 서비스 사업자: ITX Fashion Ltd. ｜<br class="br_m"> 통신판매업신고 : 제2014-서울강남-02297 <br class="br_m"><a href="#">(사업자정보확인)</a><br>
+            Copyright 2018© ZARA. All rights reserved</div>
+    </footer>
+</body>
+</html>

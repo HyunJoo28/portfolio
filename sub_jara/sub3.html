@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>ZARA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/sub3.css" type="text/css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+
+    function displayNav(value){
+        $("nav > div.subnav").addClass("dp_none");
+        $("nav").find('[data-nav="'+value+'"]').removeClass("dp_none");
+
+    }
+
+    $("nav > div.nav > ul > li").mouseover(function(){
+        var value = $(this).attr("id");
+        console.log(value);
+        displayNav(value);
+    });
+
+    $("nav > div.subnav").mouseleave(function(){
+        $("nav > div.subnav").addClass("dp_none");
+    });
+    
+})
+  </script>
+ </head>
+<body>
+    <header>
+        <div class="clearfix">
+            <a class="btn_toggle" href="#">menu</a>
+            <a class="btn_lang" href="#">KOREAN<span>▼</span></a>
+            <div class="right_menu">
+                <a href="#">로그인</a>
+                <a href="#">마이페이지</a>
+                <a href="#">고객센터</a>
+                <form action="search.jsp" method="post">
+                    <input class="" type="search" placeholder="제품명을 입력하세요" /><!-- 
+                    --><button type="submit"></button>
+                </form>
+            </div>
+            <h1><a class="login" href="#">logo</a></h1>
+        </div>
+        <nav>
+            <div class="top_bar clearfix">
+                <form action="search.jsp" method="post">
+                    <input type="search" placeholder="제품명을 입력하세요" /><!-- 
+                    --><button type="submit"></button>
+                </form>
+                <a href="#">close</a>
+            </div>
+            <div class="nav">
+                <ul class="main_nav clearfix">
+                    <li class="active" id="women"><a href="#">WOMEN</a></li>
+                    <li id="trf"><a href="#">TRF</a></li>
+                    <li id="men"><a href="#">MEN</a></li>
+                    <li id="kids"><a href="#">KIDS</a></li>
+                </ul>
+                <ul class="sub_menu">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">KOREAN</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="women">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li><a href="#">특가 상품<span class="sup">NEW</span></a></li>
+                    <li class="br"><a href="#">미니멀 컬렉션</a></li>
+                    <li><a href="#">트위드<span class="sup">NEW</span></a></li>
+                    <li><a href="#">스카프 프린트</a></li>
+                    <li><a href="#">체크</a></li>
+                    <li><a href="#">프리미엄</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">블레이저</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">니트</a></li>
+                    <li><a href="#">맨투맨</a></li>
+                    <li><a href="#">드레스</a></li>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">드레스</a></li>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                    <li><a href="#">바디수트</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">세트</a></li>
+                    <li><a href="#">수트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li><a href="#">악세사리</a></li>
+                    <li class="br"><a href="#">RETRO AESTHETICS<span class="sup">NEW</span></a></li>
+                    <li><a href="#">THE KNITS</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="trf">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li class="br"><a href="#">ALL ABOUT DENIM<span class="sup">NEW</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">셔츠/블라우스</a></li>
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">맨투맨</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">점프수트</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                    <li><a href="#">스커트</a></li>
+                    <li><a href="#">세트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li class="br"><a href="#">DENIM</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="men">
+                <ul>
+                    <li><a href="#">이번 주 신상품</a></li>
+                    <li><a href="#">베스트 상품</a></li>
+                    <li><a href="#">베이직 아이템</a></li>
+                    <li><a href="#">특가상품</a></li>
+                    <li class="br"><a href="#">ALL TIME</a></li>
+                    <li><a href="#">STREET</a></li>
+                    <li><a href="#">SHOP BY COLLECTION</a></li>
+                </ul>
+                <ul>
+                    <li class="br_t"><a href="#">아우터</a></li>
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">블레이저</a></li>
+                    <li><a href="#">셔츠</a></li>
+                    <li><a href="#">티셔츠</a></li>
+                    <li><a href="#">폴로</a></li>
+                    <li><a href="#">맨투맨/후디</a></li>
+                    <li><a href="#">니트</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">수트</a></li>
+                    <li><a href="#">조깅</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">진</a></li>
+                    <li><a href="#">쇼츠</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">슈즈</a></li>
+                    <li><a href="#">백</a></li>
+                    <li><a href="#">악세사리</a></li>
+                    <li><a href="#">수영복</a></li>
+                </ul>
+            </div>
+            <div class="subnav clearfix dp_none" data-nav="kids">
+                <ul>
+                    <li><a href="#">GIRL | 만5세-14세</a></li>
+                    <li><a href="#">BOY | 만5세-14세</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">BABY GIRL | 3개월-만4세</a></li>
+                    <li><a href="#">BABY BOY | 3개월-만4세</a></li>
+                    <li><a href="#">MINI | 0-12개월</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SHOES</a></li>
+                    <li><a href="#">MICKEY'S 90TH!</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">CAMPAIGN</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <section class="contents">
+        <article class="atc_visual">
+        
+        </article>
+        <article class="atc_filter inner_wrap">
+            <div>
+                <p><a href="#">HOME</a>><a href="#">ZARA 스토리</a>></p>
+                <span class="cur">헌 옷 방문 수거</span>
+            </div>
+        </article>
+        <hr>
+        <article class="atc_contents inner_wrap">
+            <h2>헌 옷 방문 수거</h2>
+            <p>더 이상 사용하지 않는 헌 옷을 고객님의 자택에서 직접 수거해 드립니다.</p>
+            <div class="tap_cont">
+                <div class="video">
+                    <video muted="muted" autoplay="autoplay" loop="loop">
+                            <source src="media/zara_sub.mp4" type="video/mp4">
+                            <source src="media/zara_sub.webm" type="video/webm">
+                            <source src="media/zara_sub.ogv" type="video/ogg">
+                            이 영상을 보기 위해서는 HTML5를 지원하는 브라우저가 필요합니다.
+                     </video>
+                </div>
+                <hr>
+                <p>온라인 주문 시 편리하게 재활용을 위한 무료 헌 옷 수거 옵션을 신청하실 수 있습니다.  브랜드 매장 네트워크를 통해 수거되는 모든 의류는 비영리 단체에 기부됩니다. 이러한 의류는 더욱 적절한 목적지로 
+                        보내질 수 있도록 분리되고 분류됩니다. (카리타스 / 적십자 / 구세군 / CEPF / 리드레스 / LE RELAIS / 에덴복지재단 / 우정의 집)<br><br>
+                        고객의 헌 옷은 이렇게 기부되어 재활용 또는 새로운 소재로 재생되거나, 이러한 비영리 단체의 사회 프로젝트의 자금 조성을 위해 판매됩니다.  현재 기술은 100% 면, 울 또는 폴리에스터 의류만을 새로운 
+                        섬유로 재생할 수 있기에 저희는 앞으로 더 다양한 종류의 소재를 재생할 수 있도록 관련 연구 프로젝트에 협력하고 있습니다.<br><br>   또한, 재활용 면 소재와 지속 가능한 방법으로 관리되는 산림 목재를 이용하여 
+                        생산되는 섬유인 REFIBRA™ 개발을 위해 Lenzing사와 협력하고 있습니다. 브랜드 생산 체인의 면 소재 직물 폐기물을 Lenzing사에 제공하여 그들이 이를 새로운 섬유로 재생할 수 있도록 하는 순환 시스템도 
+                        개발하고 있습니다. 이 프로젝트의 목표는 앞으로 브랜드 매장에서 수거된 의류를 통해 이러한 면 소재를 얻어낼 수 있게 되는 것입니다.<br><br>  또한, 지속 가능성을 위한 MIT-Spain Inditex 자금을 통해 스페인 
+                        대학 또는 연구 센터들의 이니셔티브를 개발할 수 있도록 MIT와 협력하여 섬유업계의 순환 경제 발전을 지원하고 있습니다.</p>
+            </div>
+        </article>
+        <article class="atc_menu">
+            <ul class="inner_wrap clearfix">
+                <li><a href="#">ZARA 제품<span></span></a>
+                   <ul>
+                       <li><a href="#">2018 컬렉션</a></li>
+                       <li><a href="#">BEST SELLER</a></li>
+                       <li><a href="#">여성</a></li>
+                       <li><a href="#">TRF</a></li>
+                       <li><a href="#">남성</a></li>
+                       <li><a href="#">아동</a></li>
+                   </ul> 
+                </li>
+                <li><a href="#">ZARA 스토리<span></span></a>
+                    <ul>
+                        <li><a href="#">헌 옷 방문 수거</a></li>
+                        <li><a href="#">원재료 소개</a></li>
+                        <li><a href="#">공급업체 소개</a></li>
+                        <li><a href="#">지역 사회 지원</a></li>
+                        <li><a href="#">2017연간 보고서</a></li>
+                        <li><a href="#">GREEN WEB</a></li>
+                    </ul> 
+                 </li>
+                 <li><a href="#">구매가이드<span></span></a>
+                    <ul>
+                        <li><a href="#">구매 방법</a></li>
+                        <li><a href="#">일반 정보</a></li>
+                        <li><a href="#">지불</a></li>
+                        <li><a href="#">발송</a></li>
+                        <li><a href="#">교환 및 환불</a></li>
+                        <li><a href="#">리콜 상품</a></li>
+                        <li><a href="#">내 계정</a></li>
+                    </ul> 
+                 </li>
+                 <li><a href="#">FOLLOW<span></span></a>
+                    <ul>
+                        <li><a href="#">뉴스레터</a></li>
+                        <li><a href="#">언론보도</a></li>
+                        <li><a href="#">TWITTER</a></li>
+                        <li><a href="#">YOUTUBE</a></li>
+                    </ul> 
+                 </li>
+            </ul>
+        </article>
+    </section>  
+    <footer>
+            <p class="links">
+                <a class="bold" href="#">개인정보취급방침</a>
+                <a href="#">이용약관</a>
+                <a href="#">회사소개</a>
+                <a href="#">매장안내</a>
+            </p>
+            <div class="address">아이티엑스코리아 유한회사 ｜<br class="br_m"> 사업자등록번호: 120-88-14733 ｜<br class="br_m"> 대표자 : ROMAY DE LA COLINA JOSE MANUEL ｜ <br class="br_t"><address>서울시 강남구 영동대로 511 <br class="br_m">(삼성동, 트레이드타워 33층)</address><br class="br_d">
+            대표번호: 080-479-0880 ｜<br class="br_m"> 이메일: contact.kr@zara.com ｜<br class="br_t"> 호스팅 서비스 사업자: ITX Fashion Ltd. ｜<br class="br_m"> 통신판매업신고 : 제2014-서울강남-02297 <br class="br_m"><a href="#">(사업자정보확인)</a><br>
+            Copyright 2018© ZARA. All rights reserved</div>
+    </footer>
+</body>
+</html>

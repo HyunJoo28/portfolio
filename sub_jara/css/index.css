@@ -1,0 +1,258 @@
+/* -- mobile( ? ~ 767px ) -- */
+@media screen and (max-width: 767px) {
+
+   
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 20px 0; }
+   
+    header { position: fixed; top: 0; width: 100%; height: 60px; background:#000; z-index: 20;}
+	header > div { position: relative; }
+    header > div > a.btn_toggle { display: block; width: 60px; height: 60px; background: url("../images/btn_toggle_W.png") no-repeat center center; text-indent: -9999em;}
+    header > div > a.btn_lang {display: none;}
+    header > div > div.right_menu { display: none; }
+    header > div > h1 { position: absolute; left: 50%; top:50%; ; width:118px; height: 19px; background: url("../images/logo_W.png") no-repeat; transform: translate(-50%, -50%); background-size: cover; text-indent: -9999em; }
+   
+    header > nav { display: none; position: absolute; top:0; left: 0; width: 100vw; height: 100vh; background: #fff; z-index: 100; }
+    header > nav > div.top_bar { width: 100%; height: 60px; border-bottom: 1px solid #000; }
+	header > nav > div.top_bar > form { display: inline-block; width: calc(100% - 60px); height: 60px; padding: 10px 0 10px 20px;}
+    header > nav > div.top_bar > form > input { display: inline-block; width: calc(100% - 40px); height: 40px; padding-left: 10px; border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0;  }
+    header > nav > div.top_bar > form > button { width: 40px; height: 40px;  border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0; background: url("../images/ico_search_B.png") no-repeat center center; vertical-align: middle; }
+    header > nav > div.top_bar > a { float: right; display: inline-block; width: 60px; height: 60px; background: url("../images/btn_close.png") no-repeat center center; text-indent: -9999em; }
+
+    header > nav > div.nav { float: left; position: relative;  width: 35%; height: calc(100% - 60px); background: #000; text-align: center; }
+	header > nav > div.nav > ul.main_nav > li { height: 60px; }
+	header > nav > div.nav > ul.main_nav > li.active { background: #fff; }
+	header > nav > div.nav > ul.main_nav > li.active > a { color: #000; }
+	header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; font-size: 1.125em; color: #fff; line-height: 60px; }
+	header > nav > div.nav > ul.sub_menu { position: absolute; bottom: 30px; left: 0; width: 100%; }
+	header > nav > div.nav > ul.sub_menu > li { height: 30px; }
+	header > nav > div.nav > ul.sub_menu > li > a { font-size: 0.875em; color: #fff;  line-height: 30px; }
+	header > nav > div.subnav { overflow: scroll; float: left; width: 65%; height: calc(100% - 60px); padding: 20px; }
+	header > nav > div.subnav > ul { margin-top: 30px; }
+	header > nav > div.subnav > ul:first-child { margin-top: 0; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #777; z-index: 20; }
+
+
+
+    section { margin-top: 60px; }
+    section > article.atc_video { width: 100%; height: auto; padding-top: -100px; background-size:cover; background-position: center center;}
+    section > article.atc_video > video { display: block; width: 100%; height: auto; object-fit: cover; }
+
+    section > article.atc_collection > ul > li  { overflow: hidden; position: relative; width: 100%; margin-bottom: 5px;}
+    section > article.atc_collection > ul > li:last-child { margin-bottom: 0; }
+    section > article.atc_collection > ul > li > img { display: block; width: 100%; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(1) { display: none; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(2) { font-family: "Times New Roman", Georgia, Serif; font-style:italic; font-weight: bold; font-size: 1.25em; }
+    section > article.atc_collection > ul > li > div > a { display: inline-block; font-size: 0.75em; }
+    section > article.atc_collection > ul > li > div > a > span { display: inline-block; padding-left: 5px; font-size: 0.3em; line-height: 0.75em; }
+
+    section > article.atc_collection > ul > li:nth-of-type(1) > div { position: absolute; top: 13%; right: 4%; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div { position: absolute; top: 13%; right: 4%; color: #fff; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div > a { color: #fff; }
+    section > article.atc_collection > ul > li:nth-of-type(2n) > div { position: absolute; top: 13%; left: 4%; text-align: center; }
+
+    section > article.atc_joinlife { width: 100%; height: 250px; background: #e0e1e3 url("../images/img_joinlife.jpg") no-repeat center center; background-size: cover;}
+    section > article.atc_joinlife > a.inner_wrap { position: relative; display: block; height: 250px; }
+    section > article.atc_joinlife > a.inner_wrap > div { position: absolute; top: 50%; right: 5%; transform: translateY(-50%); text-align: center; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(1) { margin-bottom: 5px; font-family: "NotosansKR-Medium"; font-size: 2.125em; line-height: 1.2em; color: #fff;}
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(2) { margin-bottom: 50px; font-size: 0.875em; line-height: 1em; color: #fff; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(3) { font-size: 0.875em; line-height: 1.3em; color: #333; }
+
+    section > article.atc_service > ul > li  { width: 100%; margin-bottom: 5px; padding: 0 20px;}
+    section > article.atc_service > ul > li:last-child { margin-bottom: 5px; }
+    section > article.atc_service > ul > li > a { overflow: hidden; position: relative; display: block; width: 100%; height: 100%; }
+    section > article.atc_service > ul > li > a > img { display: block; width: 100%; height: 100%; } 
+    section > article.atc_service > ul > li > a > div { position: absolute; bottom: 0; left: 0; padding: 15px 20px; width: 100%; height: auto; background: rgba(0, 0, 0, 0.3); }
+    section > article.atc_service > ul > li > a > div > p:first-child { font-family: "NotosansKR-Bold"; font-size: 1.25em; color: #fff; }
+    section > article.atc_service > ul > li > a > div > p:last-child { display: none;  }
+
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul > li { padding: 0 20px;}
+    section > article.atc_menu > ul > li > a { position: relative;  display: block; width: 100%; height: 100%; padding: 10px 0; font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li > a > span { position: absolute; top: 17px; right: 0; display: inline-block; width: 16px; height: 8px; background: url("../images/btn_nav_M_on.png") no-repeat center center; background-size: 80%;}
+    section > article.atc_menu > ul > li > ul { display: none; padding: 10px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 20px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 2%; font-size: 0.875em; color: #fff;}
+    footer > p.links > a.bold { font-family: "NotosansKR-Bold"; }
+    footer > div.address { margin-top: 30px; font-size: 0.875em; color: #bbb; line-height: 1.2em; word-break: break-all;}
+    footer > div.address > address {  font-style: normal;  }
+    footer > div.address > a { display: block; font-size: 0.875em; color: #bbb; line-height: 1.2em;  margin-bottom: 10px;}
+
+
+}
+
+/* -- tablet( 768px ~ 1024px ) -- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 30px 0; }
+   
+	header { position: fixed; top: 0; width: 100%; height: 60px; background:#000; z-index: 20;}
+	header > div { position: relative; }
+    header > div > a.btn_toggle { display: block; width: 60px; height: 60px; background: url("../images/btn_toggle_W.png") no-repeat center center; text-indent: -9999em;}
+    header > div > a.btn_lang {display: none;}
+    header > div > div.right_menu { display: none; }
+    header > div > h1 { position: absolute; left: 50%; top:50%; ; width:118px; height: 19px; background: url("../images/logo_W.png") no-repeat; transform: translate(-50%, -50%); background-size: cover; text-indent: -9999em; }
+   
+    header > nav { display: none; position: absolute; top:0; left: 0; width: 70vw; height: 100vh; background: #fff; z-index: 100; }
+    header > nav > div.top_bar { width: 100%; height: 60px; border-bottom: 1px solid #000;}
+	header > nav > div.top_bar > form { display: inline-block; width: calc(100% - 60px); height: 60px; padding: 10px 0 10px 20px;}
+    header > nav > div.top_bar > form > input { display: inline-block; width: calc(100% - 40px); height: 40px; border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0;  }
+    header > nav > div.top_bar > form > button { width: 40px; height: 40px;  border-bottom: 1px solid #000; border-top: 0; border-left: 0; border-right: 0; background: url("../images/ico_search_B.png") no-repeat center center; vertical-align: middle; }
+    header > nav > div.top_bar > a { float: right; display: inline-block; width: 60px; height: 60px; background: url("../images/btn_close.png") no-repeat center center; text-indent: -9999em; }
+
+    header > nav > div.nav { float: left;position: relative;  width: 40%; height: calc(100% - 60px); background: #000; text-align: center;}
+	header > nav > div.nav > ul.main_nav > li { height: 60px; }
+	header > nav > div.nav > ul.main_nav > li.active { background: #fff; }
+	header > nav > div.nav > ul.main_nav > li.active > a { color: #000; }
+	header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; font-size: 1.25em; color: #fff; line-height: 60px; }
+	header > nav > div.nav > ul.sub_menu { position: absolute; bottom: 30px; left: 0; width: 100%; }
+	header > nav > div.nav > ul.sub_menu > li { height: 40px; }
+	header > nav > div.nav > ul.sub_menu > li > a { font-size: 1em; color: #fff;  line-height: 40px; }
+	header > nav > div.subnav { overflow: scroll; float: left; width: 60%; height: calc(100% - 60px); padding: 20px; }
+	header > nav > div.subnav > ul { margin-top: 30px; }
+	header > nav > div.subnav > ul:first-child { margin-top: 0; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #777; z-index: 20; }
+
+
+	section { margin-top: 60px; }
+    section > article.atc_video { width: 100%; height: auto; padding-top: -100px; background-size:cover; background-position: center center;}
+    section > article.atc_video > video { display: block; width: 100%; height: auto; object-fit: cover; }
+
+    section > article.atc_collection > ul > li  { position: relative; width: 100%; margin-bottom: 10px;}
+    section > article.atc_collection > ul > li:last-child { margin-bottom: 0; }
+    section > article.atc_collection > ul > li > img { display: block; width: 100%; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(1) { font-family: "NotosansKR-Medium"; font-size: 1em; margin-bottom: 5px; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(2) { font-family: "Times New Roman", Georgia, Serif; font-style: italic;  font-weight: bold; font-size: 1.875em; margin-bottom: 50px; }
+    section > article.atc_collection > ul > li > div > a { font-size: 0.875em; }
+    section > article.atc_collection > ul > li > div > a > span { padding-left: 10px; font-size: 0.4em; vertical-align: middle;}
+
+    section > article.atc_collection > ul > li:nth-of-type(1) > div { position: absolute; top: 15%; right: 7%; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div { position: absolute; top: 15%; right: 7%; color: #fff; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div > a { color: #fff; }
+    section > article.atc_collection > ul > li:nth-of-type(2n) > div { position: absolute; top: 15%; left: 7%; text-align: center; }
+
+    section > article.atc_joinlife { width: 100%; height: 429px; background: #e0e1e3 url("../images/img_joinlife.jpg") no-repeat center center; background-size: cover;}
+    section > article.atc_joinlife > a.inner_wrap { position: relative; display: block; height: 429px; margin: 0 auto;}
+    section > article.atc_joinlife > a.inner_wrap > div { position: absolute; top: 50%; right: 7%; transform: translateY(-50%); text-align: center; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(1) { margin-bottom: 20px; font-family: "NotosansKR-Medium"; font-size: 3.75em; line-height: 1.2em; color: #fff;}
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(2) { margin-bottom: 50px; font-size: 1.5em; line-height: 1em; color: #fff; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(3) { font-size: 0.875em; line-height: 1.35em; color: #333; }
+
+    section > article.atc_service > ul > li  { float: left; width: 32.4653%; margin-right: 1.302%; }
+    section > article.atc_service > ul > li:last-child { margin-right: 0; }
+    section > article.atc_service > ul > li > a { overflow: hidden; position: relative; display: block; width: 100%; height: 100%; }
+    section > article.atc_service > ul > li > a > img { display: block; width: 100%; height: 100%; } 
+    section > article.atc_service > ul > li > a > div { position: absolute; bottom: 0; left: 0; padding: 15px 20px; width: 100%; height: auto; background: rgba(0, 0, 0, 0.3); }
+    section > article.atc_service > ul > li > a > div > p:first-child { font-family: "NotosansKR-Bold"; font-size: 1.25em; color: #fff; }
+    section > article.atc_service > ul > li > a > div > p:last-child { display: none;  }
+
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul { padding: 50px 40px; }
+    section > article.atc_menu > ul > li { float: left; margin-right: 17.4%; }
+    section > article.atc_menu > ul > li > a { font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li:last-child { margin-right: 0; }
+    section > article.atc_menu > ul > li > ul { margin-top: 20px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 30px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 40px; border-right: 1px solid #fff; font-size: 1em; color: #fff;}
+    footer > p.links > a:last-child { border-right: none;}
+    footer > div.address { margin-top: 55px; font-size: 0.875em; color: #bbb; line-height: 1.5625em; }
+    footer > div.address > address { display: inline-block; font-style: normal;  }
+    footer > div.address > a { display: inline-block; font-size: 0.875em; color: #bbb; line-height: 1.2em; }
+    footer > div.address > br.br_d, br.br_m {display: none; }
+
+}
+
+/* -- desktop( 1025px ~ ? ) -- */
+@media screen and (min-width: 1025px) {
+
+    .inner_wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 50px 0; }
+   
+    header { position: fixed; top: 0; width: 100%; height: 130px; background: rgba(0,0,0,0.3); z-index: 20; transition: background 0.3s;}
+    header.black { background: #000; transition: background 0.3s; }
+    header > div { padding-top: 10px; }
+    header > div > a.btn_toggle { display: none; }
+    header > div > a.btn_lang {display: block; float: left; margin-left: 5%; font-size: 0.875em; color: #fff;}
+    header > div > a.btn_lang > span { display: inline-block; margin-left: 10px; margin-top: -2px; font-size: 0.4em; color: #fff; vertical-align: middle; }
+    header > div > div.right_menu { float: right; margin-right: 5%; }
+    header > div > div.right_menu > a { margin-right: 15px; font-size: 0.875em; color: #fff; }
+    header > div > div.right_menu > form { display: inline-block; }
+    header > div > div.right_menu > form > input { display: none; }
+    header > div > div.right_menu > form > input.active[type="search"] { display: inline-block; width: 160px; height: 30px; border-bottom: 1px solid #fff; border-top: 0; border-left: 0; border-right: 0; }
+    header > div > div.right_menu > form > button { width: 30px; height: 30px; border: 0; background: url("../images/ico_search.png") no-repeat center center; vertical-align: middle; }
+    header > div > h1 { clear: both; position: relative; left: 50%; width:198px; height: 32px; background: url("../images/logo_W.png") no-repeat; transform: translateX(-50%); text-indent: -9999em; }
+   
+    header > nav > div.top_bar { display: none; }
+    header > nav > div.nav > ul.main_nav { padding: 20px 15% 0 15%; }
+    header > nav > div.nav > ul.main_nav > li { float: left; width: 25%; text-align: center; }
+    header > nav > div.nav > ul.main_nav > li > a { display: block; width: 100%; height: 100%; padding-bottom: 10px; font-family: "NotosansKR-Medium"; font-size: 1.25em; color: #fff;}
+    header > nav > div.nav > ul.sub_menu { display: none; }
+    header > nav > div.subnav { padding: 20px 15%; background: rgba(0,0,0,0.3); }
+    header.black > nav > div.subnav { background: #fff; }
+    header > nav > div.subnav > ul { float: left; width: 25%; text-align: center; }
+    header > nav > div.subnav > ul > li.br { margin-top:30px; }
+    header > nav > div.subnav > ul > li > a { position: relative; display: inline-block; font-size: 0.875em; line-height: 1.875em; color: #fff; }
+    header.black > nav > div.subnav > ul > li > a { color: #000; }
+    header > nav > div.subnav > ul > li > a > span.sup { display: inline-block; margin-left: 4px; margin-top: -3px; font-size: 0.6em; vertical-align: top; }
+    header > nav > div.subnav > ul > li > a:hover:after { position: absolute; left:0; bottom: 5px; content:""; display: block; width: 100%; height: 1px; background: #fff; z-index: 20; }
+    header.black > nav > div.subnav > ul > li > a:hover:after { background: #000; }
+
+    section > article.atc_video { width: 100%; height: auto; padding-top: -100px; background-size:cover; background-position: center center;}
+    section > article.atc_video > video { display: block; width: 100%; height: auto; object-fit: cover; }
+
+    section > article.atc_collection > ul > li  { position: relative; width: 100%; margin-bottom: 10px;}
+    section > article.atc_collection > ul > li:last-child { margin-bottom: 0; }
+    section > article.atc_collection > ul > li > img { display: block; width: 100%; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(1) { font-family: "NotosansKR-Medium"; font-size: 1.875em; margin-bottom: 5px; }
+    section > article.atc_collection > ul > li > div > p:nth-of-type(2) { font-family: "Times New Roman", Georgia, Serif; font-style: italic;  font-weight: bold; font-size: 3.125em; margin-bottom: 70px; }
+    section > article.atc_collection > ul > li > div > a { font-size: 1.4em; }
+    section > article.atc_collection > ul > li > div > a > span { padding-left: 15px; font-size: 0.6em; vertical-align: middle;}
+
+    section > article.atc_collection > ul > li:nth-of-type(1) > div { position: absolute; top: 16%; right: 7%; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div { position: absolute; top: 16%; right: 7%; color: #fff; text-align: center; }
+    section > article.atc_collection > ul > li:nth-of-type(3) > div > a { color: #fff; }
+    section > article.atc_collection > ul > li:nth-of-type(2n) > div { position: absolute; top: 16%; left: 7%; text-align: center; }
+
+    section > article.atc_joinlife { width: 100%; height: 719px; background: #e0e1e3 url("../images/img_joinlife.jpg") no-repeat center center;}
+    section > article.atc_joinlife > a.inner_wrap { position: relative; display: block; height: 719px; margin: 0 auto;}
+    section > article.atc_joinlife > a.inner_wrap > div { position: absolute; top: 50%; right: 3%; transform: translateY(-50%); text-align: center; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(1) { margin-bottom: 30px; font-family: "NotosansKR-Medium"; font-size: 6.25em; line-height: 1.2em; color: #fff;}
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(2) { margin-bottom: 80px; font-size: 2.5em; line-height: 1em; color: #fff; }
+    section > article.atc_joinlife > a.inner_wrap > div > p:nth-of-type(3) { font-size: 1.5em; line-height: 1.5em; color: #333; }
+
+    section > article.atc_service > ul > li  { float: left; width: 31.0344%; margin-right: 3.4482%; }
+    section > article.atc_service > ul > li:last-child { margin-right: 0; }
+    section > article.atc_service > ul > li > a { position: relative; display: block; width: 100%; height: 100%; }
+    section > article.atc_service > ul > li > a:before { content: ""; display: block; position: absolute; top:0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0, 0.5) url("../images/ico_plus.png") no-repeat center 30%; opacity: 0; z-index: 10;}
+    section > article.atc_service > ul > li > a > img { display: block; width: 100%; height: 100%; } 
+    section > article.atc_service > ul > li > a:hover:before { opacity: 1; transition: opacity 0.3s;}
+    section > article.atc_service > ul > li > a > div { position: absolute; bottom: 0; left: 0; padding: 20px; width: 100%; height: auto; z-index:20; opacity: 0;}
+    section > article.atc_service > ul > li > a > div > p:first-child { font-family: "NotosansKR-Bold"; font-size: 1.875em; color: #fff; margin-bottom: 15px; }
+    section > article.atc_service > ul > li > a > div > p:last-child { font-size: 1.125em; color: #ccc;  }
+    section > article.atc_service > ul > li > a:hover > div { opacity: 1; transition: opacity 0.3s;}
+
+    section > article.atc_menu { background: #e5e5e5; }
+    section > article.atc_menu > ul { padding: 50px 40px; }
+    section > article.atc_menu > ul > li { float: left; margin-right: 21.8%; }
+    section > article.atc_menu > ul > li > a { font-family: "NotosansKR-Bold"; font-size: 0.875em; color: #333; }
+    section > article.atc_menu > ul > li:last-child { margin-right: 0; }
+    section > article.atc_menu > ul > li > ul { margin-top: 20px; }
+    section > article.atc_menu > ul > li > ul > li > a { display: block; font-size: 0.875em; color: #555; line-height: 1.9em;}
+
+    footer { width: 100%; padding: 30px 0;  background: #000; text-align: center;}
+    footer > p.links > a { display: inline-block; padding: 0 40px; border-right: 1px solid #fff; font-size: 1em; color: #fff;}
+    footer > p.links > a:last-child { border-right: none;}
+    footer > div.address { margin-top: 55px; font-size: 0.875em; color: #bbb; line-height: 1.5625em; }
+    footer > div.address > address { display: inline-block; font-style: normal;  }
+    footer > div.address > a { display: inline-block; font-size: 0.875em; color: #bbb; line-height: 1.2em; }
+    footer > div.address > br.br_t, br.br_m {display: none; }
+
+}

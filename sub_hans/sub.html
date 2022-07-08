@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>한스 소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/sub.css" type="text/css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+
+    var $gnb_list = $(".d_nav > ul.gnb > li");
+		var $sub_menu =  $(".d_nav > div.d_sub_menu");
+		var $sub_menuList = $(".d_nav > div.d_sub_menu > div.inner_wrap > .sub_menu_zone > ul > li");
+
+	 $gnb_list.mouseover(function(){
+		 $sub_menu.css("display","block");
+	 });
+	 $("header").mouseleave(function(){
+		$sub_menu.css("display","none");
+	 });
+	 
+	 $sub_menuList.mouseover(function(){
+		var ul_num = $(this).parent("ul").index();
+		$gnb_list.eq(ul_num).children("a").addClass("active");	
+	 });
+	 $sub_menuList.mouseleave(function(){
+		var ul_num = $(this).parent("ul").index();
+		$gnb_list.children("a").removeClass("active");	
+	 });
+     var topBar = $("#topBar").offset();
+     var header = $("header").height();
+     var barThis = $("#topBar");
+     var fixNext = $(".fixNextTag");
+     var moveOffset = header+barThis.height();
+
+    $(window).scroll(function(){
+    
+        var docScrollY = $(document).scrollTop()
+
+        if( docScrollY > topBar.top-header) {
+            barThis.addClass("top_bar_fix");
+            fixNext.addClass("mg_top");
+        }else{
+            barThis.removeClass("top_bar_fix");
+            fixNext.removeClass("mg_top");
+        }
+
+    });
+
+    var link = $('article.atc_lng a');
+    link.on('click',function(e){
+        
+        //href 속성을 통해, section id 타겟을 잡음
+        var target = $($(this).attr('href')); 
+		
+		console.log(moveOffset);
+		console.log(target.offset().top);
+        
+        //target section의 좌표를 통해 꼭대기로 이동
+        $('html, body').animate({
+            scrollTop: target.offset().top-moveOffset
+        },600);
+        
+        //active 클래스 부여
+        $(this).addClass('active');
+
+        //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
+        e.preventDefault();
+    });
+
+    $(window).on('scroll',function(){
+        findPosition();
+    });
+
+     function findPosition(){
+        $('article').each(function(){
+            if( (($(this).offset().top-moveOffset) - $(window).scrollTop() ) < 20){
+                link.removeClass('active');
+                $('article > ul').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+            }
+        });
+    }
+
+    findPosition();
+
+    window.onload = function() {
+		function load_act_ul_width(){
+			var $nav_main = $(".d_nav > ul.gnb > li");
+			console.log($nav_main);
+			var $sub_ul = $(".d_nav > div.d_sub_menu > div.inner_wrap > .sub_menu_zone > ul");
+			$sub_ul.each(function(idx, elm){
+				var new_width = $nav_main.eq(idx).outerWidth();
+				console.log(new_width);
+				$(this).css("width", new_width);
+			})
+		};
+		load_act_ul_width();
+	};
+
+})
+  </script>
+ </head>
+    <body>
+        <header>
+            <div class="inner_wrap clearfix">
+                <a class="btn_toggle off" href="#">menu</a>
+                <a class="btn_search" href="#">search</a>
+                <div class="logo_zone">
+                    <h1><a href="index.html">logo</a></h1>
+                </div>
+                <nav class="d_nav">
+                    <ul class="gnb clearfix">
+                        <li id="list"><a href="#">한스소개</a></li>
+                        <li><a href="#">메뉴안내</a></li>
+                        <li><a href="#">소통공간</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <div class="d_sub_menu clearfix">
+                        <div class="inner_wrap">
+                            <div class="logo_zone">
+                                <img src="images/img_navbanner.png" alt="배너이미지" />
+                                <p>한스케익 X 케익날다</p>
+                                <p>케익&꽃 배달 서비스</p>
+                            </div>
+                            <div class="sub_menu_zone">
+                                <ul>
+                                    <li><a href="#">프롤로그</a></li>
+                                    <li><a href="#">브랜드 이야기</a></li>
+                                    <li><a href="#">둘러보기</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                    <li><a href="#">채용</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">신제품</a></li>
+                                    <li><a href="#">프리미엄케익</a></li>
+                                    <li><a href="#">시즌케익</a></li>
+                                    <li><a href="#">조각케익</a></li>
+                                    <li><a href="#">롤케익&쿠키</a></li>
+                                    <li><a href="#">커피&음료</a></li>
+                                    <li><a href="#">기타</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">한스 뉴스</a></li>
+                                    <li><a href="#">케익이야기</a></li>
+                                    <li><a href="#">커피이야기</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">진행중 이벤트</a></li>
+                                    <li><a href="#">지난 이벤트</a></li>
+                                    <li><a href="#">당첨자 발표</a></li>
+                                    <li><a href="#">제휴혜택</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">고객의 소리</a></li>
+                                    <li><a href="#">아이디어 제안</a></li>
+                                    <li><a href="#">Q&A</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <nav class="m_nav">
+                    <ul>
+                        <li><a href="#">한스소개</a>
+                            <ul>
+                                <li><a href="#">프롤로그</a></li>
+                                <li><a href="#">브랜드 이야기</a></li>
+                                <li><a href="#">둘러보기</a></li>
+                                <li><a href="#">오시는길</a></li>
+                                <li><a href="#">채용</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴안내</a>
+                            <ul>
+                                <li><a href="#">신제품</a></li>
+                                <li><a href="#">프리미엄케익</a></li>
+                                <li><a href="#">시즌케익</a></li>
+                                <li><a href="#">조각케익</a></li>
+                                <li><a href="#">롤케익&쿠키</a></li>
+                                <li><a href="#">커피&음료</a></li>
+                                <li><a href="#">기타</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">소통공간</a>
+                            <ul>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">한스 뉴스</a></li>
+                                <li><a href="#">케익이야기</a></li>
+                                <li><a href="#">커피이야기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이벤트</a>
+                            <ul>
+                                <li><a href="#">진행중 이벤트</a></li>
+                                <li><a href="#">지난 이벤트</a></li>
+                                <li><a href="#">당첨자 발표</a></li>
+                                <li><a href="#">제휴혜택</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객센터</a>
+                            <ul>
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">아이디어 제안</a></li>
+                                <li><a href="#">Q &amp; A</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="search.jsp" method="post">
+                    <input type="search" placeholder="검색" /><!-- 
+                 --><button type="submit">
+                </form>
+            </div>
+        </header>
+        <section class="contents">
+           <article class="atc_visual max_wrap">
+                <div class="visual_img">
+                    <p>한스 소개</p>
+                </div>
+           </article> 
+           <article class="atc_page_map max_wrap">
+                <p>
+                    <a href="#">홈</a><span>></span>한스소개
+                </p>
+           </article>
+           <article class="atc_lng wrap" id="topBar">
+                <ul>
+                    <li><a data-scroll="prolog" href="#prolog" class="">프롤로그</a></li>
+                    <li><a data-scroll="story" href="#story" class="">브랜드 이야기</a></li>
+                    <li><a data-scroll="store" href="#store" class="">둘러보기</a></li>
+                    <li><a data-scroll="map" href="#map" class="">오시는길</a></li>
+                    <li><a data-scroll="job" href="#job" class="">채용</a></li>
+                </ul>
+           </article>
+           <article class="atc_prolog inner_wrap fixNextTag" id="prolog">
+                <h2>프롤로그</h2>
+                <p class="title">케이크는 언제부터 우리에게 힐링푸드가 되었을까요?</p>
+                <p class="phrase">생일과 같은 특별한 날에만 케이크를 먹었던 때부터 한스 케이크는 우리의 일상에 한 조각 케이크가<br> 
+                        작은 행복과 즐거움이 될 수 있도록 노력해 왔습니다.</p>
+                <ul class="column clearfix">
+                    <li><img src="images/img_prolog_01.jpg" alt="꽃 모양의 컵케이크" /></li>
+                    <li><img src="images/img_prolog_02.jpg" alt="생일파티 케이크" /></li>
+                </ul>
+                <p class="title"><span class="point">love the moment HANS</span></p>
+                <p class="phrase">디저트가 일상이 된 지금 보다 많은 분들이 ‘디저트’ 뿐만 아니라 ‘문화’를 즐길 수 있도록
+                     <br class="pc">한스케이크가 그 자리를 <br class="tablet">지켜왔다는 데에 자부심을 느낍니다. 앞으로도 고객 여러분의 일상의 외로움을 달래줄, 슬픔을 잠시 잊게 해 줄,<br> 
+                    그리고 행복한 여러분을 더더욱 빛나게 해 줄 한스케이크가 되겠습니다.</p>
+                <ul class="clearfix">
+                    <li><img src="images/img_prolog_03.jpg" alt="한스 매장 간판" /></li>
+                    <li><img src="images/img_prolog_04.jpg" alt="한스 매장 내 행복한 커플" /></li>
+                </ul>
+           </article>
+           <article class="atc_story inner_wrap" id="story">
+                <h2>브랜드 이야기</h2>
+                <p class="title">눈으로도 맛보아요 한스의 제품 디자인에 숨겨진 비밀!</p>
+                <p class="phrase">매일 새벽, 건강하고 행복한 디저트를 만드는 한스의 이유 있는 고집</p>
+                <ul class="column clearfix">
+                    <li>    
+                        <div>
+                            <img src="images/img_sub_story_01.jpg" alt="밀가루와 각종 재료" />
+                            <p class="info">최고의 재료 선택</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/img_sub_story_02.jpg" alt="신선한 우유와 계란" />
+                            <p class="info">철저한 위생과 안전한 먹거리</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/img_sub_story_03.jpg" alt="심플하게 아이싱한 딸기 생크림 케이크" />
+                            <p class="info">직관적인 디자인</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/img_sub_story_04.jpg" alt="3가지 컬러로 조합을 이룬 조각케익" />
+                            <p class="info">3가지 색상을 넘지 않는 컬러</p>
+                        </div>
+                    </li>
+                </ul>
+           </article>                
+           <article class="atc_store inner_wrap" id="store">
+                <h2>둘러보기</h2>
+                <ul class="column clearfix">
+                    <li>
+                        <p class="title"><span class="point">Love the Moment는</span><br>
+                                HANS Cafe에서부터<br> 
+                                시작 합니다.</p>
+                        <p class="phrase">주말 가족들간의 즐거운 디저트 타임을 부모님은 편안하게<br>
+                                아이들은 안전하게 보낼 수 있도록 제공하는<br> 
+                                하이체어와 같은 작은 배려,<br>
+                                엄마들의 모임이나 사무실을 벗어나 진행하는<br> 
+                                회사의 중요한 리프레시 회의를 위한 롱테이블은<br> 
+                                여러분들의 일상에 소소한 뒷받침이 되려는 <br classs="tablet">한스의 배려입니다.</p>
+                        <p class="phrase">따뜻한 톤의 매장 인테리어 컬러 조합 및 주요 점포에 <br class="tablet">준비되어<br class="pc">  
+                                있는 디자이너 가구들은 조화 속의 개성, <br class="tablet">일상 속 변주를 원하는<br class="pc"> 
+                                고객분들이 한스에서 오감 만족을 <br class="tablet">하기를 바라는<br class="pc">
+                                저희의 노력입니다.</p>
+                    </li>
+                    <li><img src="images/img_store_01.jpg" alt="한스 매장 간판" /></li>
+                    <li><img src="images/img_store_02.jpg" alt="한스 매장 내 행복한 커플" /></li>
+                    <li><img src="images/img_store_03.jpg" alt="한스 매장 간판" /></li>
+                </ul>
+           </article>
+           <article class="atc_map inner_wrap" id="map">
+                <h2>오시는길</h2>
+                <div> 
+                    <div>주소</div>
+                    <div>경기 안양시 동안구 시민대로 401 대륭테크노타운 15차 B111호 (관양2동 224-5)</div>
+                </div>
+                <div>
+                    <div>TEL</div>
+                    <div>031-463-3505</div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6933398657425!2d126.97244581598157!3d37.39708387983013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5e38b139ae4d%3A0x85e0833165136c54!2z64yA66Wt7YWM7YGs64W47YOA7Jq0MTXssKg!5e0!3m2!1sko!2skr!4v1538837673412" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+           </article>
+           <article class="atc_job inner_wrap clearfix" id="job">
+                <h2>채용</h2>
+                <div>
+                    <p>꿈을 위한 가슴 벅찬 도전!</p>
+                    <p class="title"><span class="point">한스</span>를 책임질 유능한<br>
+                        인재 여러분을 기다리고 있습니다!</p>
+                    <a href="#">현재 진행중인 공고를 확인하세요</a>
+                </div>
+           </article>
+        </section>  
+        <footer>
+            <div class="notice">
+                <div class="inner_wrap clearfix">
+                    <div class="notice_head">
+                        <a href="#">NOTICE</a>
+                    </div>
+                    <div class="notice_cont">
+                        <a href="#">
+                            <span class="title">[제품] 한스케익 해썹(HACCP) 인증 획득</span><!-- 
+                         --><span class="date">2018.07.21</span>
+                        </a>
+                    </div>
+                    <div class="notice_btns">
+                        <a class="btn_prev" href="#">prev</a><!-- 
+                     --><a class="btn_next" href="#">next</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_area">
+                <div class="inner_wrap">
+                    <div class="footer_logo">
+                        <img src="images/logo_2.jpg" alt="logo">
+                    </div>
+                    <div class="footer_menu">
+                        <ul class="clearfix">
+                            <li><a class="impact" href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이메일주소 무단 수집 거부</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_info">
+                        <address>경기 안양시 동안구 시민대로 401 대륭테크노타운 15차 B111호 (관양2동 224-5) ㈜한스제과</address>
+                        <p>TEL 031-463-3505 / 사업자등록번호 214-88-63183 / 통신판매업신고 제2013-경기안양-0039호 / 대표이사 안영식, 한성훈, 안주태</p>
+                        <p>Copyright 2018 © HANS CAKE. All Right Reserve</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
